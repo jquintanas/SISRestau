@@ -1,0 +1,11 @@
+G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\Debug\SISRestaurantDelicias.Resources.resources
+G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\Debug\SISRestaurantDelicias.panelDeVista.resources
+G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\Debug\SISRestaurantDelicias.vbproj.GenerateResource.Cache
+G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\bin\Debug\SISRestaurantDelicias.exe
+G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\bin\Debug\SISRestaurantDelicias.pdb
+G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\bin\Debug\SISRestaurantDelicias.xml
+G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\Debug\SISRestaurantDelicias.exe
+G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\Debug\SISRestaurantDelicias.xml
+G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\Debug\SISRestaurantDelicias.pdb
+G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\bin\Debug\SISRestaurantDelicias.exe.config
+G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\Debug\SISRestaurantDelicias.main.resources
