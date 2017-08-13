@@ -9,3 +9,6 @@ G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\D
 G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\Debug\SISRestaurantDelicias.pdb
 G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\bin\Debug\SISRestaurantDelicias.exe.config
 G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\Debug\SISRestaurantDelicias.main.resources
+G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\Debug\SISRestaurantDelicias.nuevoPlatillo.resources
+G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\Debug\SISRestaurantDelicias.nuevoUsuario.resources
+G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\Debug\SISRestaurantDelicias.nuevoRestaurante.resources

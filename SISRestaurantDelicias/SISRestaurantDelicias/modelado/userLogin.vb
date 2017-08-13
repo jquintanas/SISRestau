@@ -1,21 +1,14 @@
-﻿Imports System.Text.RegularExpressions
+﻿|Imports System.Text.RegularExpressions
 
-Public Class userLogin
-    Protected Friend id As String
-    Protected Friend nombre As String
-    Protected Friend pasword As String
-    Protected Friend rol As String
+Public Class userLogin : Inherits basicUser
     Protected Friend diccionarioCategoria As List(Of String)
     Protected Friend keyC As List(Of String)
     Protected Friend keyCSinRepeticiones As List(Of String)
     Protected Friend platillos As List(Of platillos)
     Protected Friend clavesPlatillos As List(Of String)
 
-    Public Sub New(ByVal id As String, ByVal nombre As String, ByVal password As String, ByVal rol As String, ByVal platillos As List(Of platillos), ByVal clavesPlatillos As List(Of String))
-        Me.id = id
-        Me.nombre = nombre
-        Me.pasword = password
-        Me.rol = rol
+    Public Sub New(ByVal id As String, ByVal nombre As String, ByVal password As String, ByVal rol As String, ByVal platillos As List(Of platillos), ByVal clavesPlatillos As List(Of String), ByVal rest As String)
+        MyBase.New(id, nombre, password, rol, rest)
         Me.platillos = platillos
         Me.clavesPlatillos = clavesPlatillos
     End Sub
@@ -80,19 +73,12 @@ Public Class userLogin
         End If
     End Function
 
-    Public Function mostrarPlatillo(ByVal id As String) As Integer
+    Public Function mostrarPlatillo(ByVal id As String) As Collection
         Dim retorno As Integer
+        Dim colR As Collection
         For Each plato As platillos In Me.platillos
             If plato.Fullid = id Then
-                panelDeVista.ListBox1.Items.Clear()
-                panelDeVista.ListBox1.Items.Add("Su seleccion es: " + plato.Fullnombre)
-                panelDeVista.ListBox1.Items.Add("Es de servido: " + plato.Fullservido)
-                panelDeVista.ListBox1.Items.Add("Es de tipo: " + plato.Fulltipo)
-                panelDeVista.ListBox1.Items.Add("Lo encuentra en el restaurante: " + plato.FullRestaurant)
-                panelDeVista.ListBox1.Items.Add("La categoria es: " + plato.FullCategoria)
-                panelDeVista.ListBox1.Items.Add("Los ingredientes son: " + plato.FullIngredientes)
-                panelDeVista.ListBox1.Items.Add("Imagenes: " + plato.FullImagenes)
-                panelDeVista.ListBox1.Items.Add("Descripción: " + plato.Fulldescripcion)
+                colR.Add(plato)
             End If
             If Me.rol = constantes.estudiante Then
                 Dim opc As Boolean = yesNoInput()
@@ -103,23 +89,24 @@ Public Class userLogin
                 End If
             End If
         Next
+        colR.Add(retorno)
+        Return colR
+    End Function
+
+    Public Function mostrarPlatillos(ByVal categoria As categoria) As Collection
+        Dim listTmp As New List(Of String)
+        Dim listPlatos As New List(Of platillos)
+        Dim retorno As New Collection
+        For Each plato As platillos In Me.platillos
+            If plato.FullCategoria = categoria.Fullnombre Then
+                listTmp.Add(plato.Fullnombre)
+                listPlatos.Add(plato)
+            End If
+        Next
+        retorno.Add(listPlatos)
+        retorno.Add(listTmp)
         Return retorno
     End Function
 
-    Public Function mostrarPlatillos(ByVal categoria As categoria) As List(Of String)
-        Dim I As Integer = 1
-        Dim listTmp As List(Of String)
-        panelDeVista.ListBox1.Items.Clear()
-        For Each plato As platillos In Me.platillos
-            If plato.FullCategoria = categoria.Fullnombre Then
-                panelDeVista.ListBox1.Items.Add(I + ".- " + plato.Fullnombre + " su servido es: " + plato.Fullservido +
-                                                " es de tipo: " + plato.Fulltipo + " se encuentra en el restaurante: " + plato.FullRestaurant)
-                listTmp.Add(plato.Fullnombre)
-                I = I + 1
-            End If
-        Next
-        Return listTmp
-    End Function
-    
 
 End Class

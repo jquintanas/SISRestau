@@ -2,3 +2,11 @@ G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\R
 G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\Release\SISRestaurantDelicias.panelDeVista.resources
 G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\Release\SISRestaurantDelicias.vbproj.GenerateResource.Cache
 G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\bin\Release\SISRestaurantDelicias.exe.config
+G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\bin\Release\SISRestaurantDelicias.exe
+G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\bin\Release\SISRestaurantDelicias.pdb
+G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\bin\Release\SISRestaurantDelicias.xml
+G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\Release\SISRestaurantDelicias.main.resources
+G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\Release\SISRestaurantDelicias.nuevoPlatillo.resources
+G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\Release\SISRestaurantDelicias.exe
+G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\Release\SISRestaurantDelicias.xml
+G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\Release\SISRestaurantDelicias.pdb

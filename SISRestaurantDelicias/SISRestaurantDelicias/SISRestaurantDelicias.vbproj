@@ -73,6 +73,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="control\constantes.vb" />
+    <Compile Include="control\funcionesComunes.vb" />
+    <Compile Include="control\lecturaDeArchivo.vb" />
     <Compile Include="main.Designer.vb">
       <DependentUpon>main.vb</DependentUpon>
     </Compile>
@@ -82,10 +84,12 @@
     <Compile Include="modelado\Asistente.vb" />
     <Compile Include="modelado\categoria.vb" />
     <Compile Include="modelado\estudiante.vb" />
+    <Compile Include="modelado\basicUser.vb" />
     <Compile Include="modelado\formaDePago\IFormaDePago.vb" />
     <Compile Include="modelado\listaPlatillos.vb" />
     <Compile Include="modelado\platillos.vb" />
     <Compile Include="modelado\restaurante.vb" />
+    <Compile Include="modelado\userAdmin.vb" />
     <Compile Include="modelado\userLogin.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -101,6 +105,30 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="vista\mostrarPlato.Designer.vb">
+      <DependentUpon>mostrarPlato.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vista\mostrarPlato.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\nuevoPlatillo.Designer.vb">
+      <DependentUpon>nuevoPlatillo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vista\nuevoPlatillo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\nuevoRestaurante.Designer.vb">
+      <DependentUpon>nuevoRestaurante.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vista\nuevoRestaurante.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\nuevoUsuario.Designer.vb">
+      <DependentUpon>nuevoUsuario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vista\nuevoUsuario.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="vista\panelDeVista.Designer.vb">
       <DependentUpon>panelDeVista.vb</DependentUpon>
@@ -118,6 +146,18 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\mostrarPlato.resx">
+      <DependentUpon>mostrarPlato.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\nuevoPlatillo.resx">
+      <DependentUpon>nuevoPlatillo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\nuevoRestaurante.resx">
+      <DependentUpon>nuevoRestaurante.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\nuevoUsuario.resx">
+      <DependentUpon>nuevoUsuario.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\panelDeVista.resx">
       <DependentUpon>panelDeVista.vb</DependentUpon>

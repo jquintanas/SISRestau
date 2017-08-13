@@ -23,9 +23,16 @@ Partial Class panelDeVista
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.ListBoxCategorias = New System.Windows.Forms.ListBox()
+        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.ListarCategoriasDePlatosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BuscarPlatoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PorNombreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PorDescripciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CerrarSesiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -33,27 +40,67 @@ Partial Class panelDeVista
         Me.Panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark
         Me.Panel1.Controls.Add(Me.ListBoxCategorias)
         Me.Panel1.Controls.Add(Me.ListBox1)
+        Me.Panel1.Controls.Add(Me.MenuStrip1)
         Me.Panel1.Location = New System.Drawing.Point(5, 4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(839, 445)
         Me.Panel1.TabIndex = 0
         '
-        'ListBox1
-        '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Items.AddRange(New Object() {"12345"})
-        Me.ListBox1.Location = New System.Drawing.Point(7, 8)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(196, 134)
-        Me.ListBox1.TabIndex = 0
-        '
         'ListBoxCategorias
         '
         Me.ListBoxCategorias.FormattingEnabled = True
-        Me.ListBoxCategorias.Location = New System.Drawing.Point(232, 8)
+        Me.ListBoxCategorias.Location = New System.Drawing.Point(681, 53)
         Me.ListBoxCategorias.Name = "ListBoxCategorias"
-        Me.ListBoxCategorias.Size = New System.Drawing.Size(152, 134)
+        Me.ListBoxCategorias.Size = New System.Drawing.Size(152, 381)
         Me.ListBoxCategorias.TabIndex = 1
+        '
+        'ListBox1
+        '
+        Me.ListBox1.FormattingEnabled = True
+        Me.ListBox1.Location = New System.Drawing.Point(7, 53)
+        Me.ListBox1.Name = "ListBox1"
+        Me.ListBox1.Size = New System.Drawing.Size(668, 381)
+        Me.ListBox1.TabIndex = 0
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ListarCategoriasDePlatosToolStripMenuItem, Me.BuscarPlatoToolStripMenuItem, Me.CerrarSesiónToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(839, 24)
+        Me.MenuStrip1.TabIndex = 2
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'ListarCategoriasDePlatosToolStripMenuItem
+        '
+        Me.ListarCategoriasDePlatosToolStripMenuItem.Name = "ListarCategoriasDePlatosToolStripMenuItem"
+        Me.ListarCategoriasDePlatosToolStripMenuItem.Size = New System.Drawing.Size(155, 20)
+        Me.ListarCategoriasDePlatosToolStripMenuItem.Text = "Listar categorias de platos"
+        '
+        'BuscarPlatoToolStripMenuItem
+        '
+        Me.BuscarPlatoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PorNombreToolStripMenuItem, Me.PorDescripciónToolStripMenuItem})
+        Me.BuscarPlatoToolStripMenuItem.Name = "BuscarPlatoToolStripMenuItem"
+        Me.BuscarPlatoToolStripMenuItem.Size = New System.Drawing.Size(84, 20)
+        Me.BuscarPlatoToolStripMenuItem.Text = "Buscar Plato"
+        '
+        'PorNombreToolStripMenuItem
+        '
+        Me.PorNombreToolStripMenuItem.Name = "PorNombreToolStripMenuItem"
+        Me.PorNombreToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
+        Me.PorNombreToolStripMenuItem.Text = "Por Nombre"
+        '
+        'PorDescripciónToolStripMenuItem
+        '
+        Me.PorDescripciónToolStripMenuItem.Name = "PorDescripciónToolStripMenuItem"
+        Me.PorDescripciónToolStripMenuItem.Size = New System.Drawing.Size(157, 22)
+        Me.PorDescripciónToolStripMenuItem.Text = "Por Descripción"
+        '
+        'CerrarSesiónToolStripMenuItem
+        '
+        Me.CerrarSesiónToolStripMenuItem.Name = "CerrarSesiónToolStripMenuItem"
+        Me.CerrarSesiónToolStripMenuItem.Size = New System.Drawing.Size(88, 20)
+        Me.CerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión"
         '
         'panelDeVista
         '
@@ -61,13 +108,23 @@ Partial Class panelDeVista
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(850, 452)
         Me.Controls.Add(Me.Panel1)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "panelDeVista"
         Me.Text = "panelDeVista"
         Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
     Friend WithEvents ListBoxCategorias As System.Windows.Forms.ListBox
+    Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
+    Friend WithEvents ListarCategoriasDePlatosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents BuscarPlatoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PorNombreToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PorDescripciónToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents CerrarSesiónToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class
