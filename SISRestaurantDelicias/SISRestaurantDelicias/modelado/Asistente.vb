@@ -47,7 +47,7 @@
     End Sub
 
     Public Sub listarPlatillos()
-        Dim panelV As New panelDeVista
+        Dim panelV As New panelDeVista(Me)
         For Each plato As platillos In Me.platillos
             panelV.ListBox1.Items.Add(plato.Fullid)
             panelV.ListBox1.Items.Add(plato.Fullnombre)

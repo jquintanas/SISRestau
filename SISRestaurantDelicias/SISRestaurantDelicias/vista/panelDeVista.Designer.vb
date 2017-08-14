@@ -26,7 +26,6 @@ Partial Class panelDeVista
         Me.ListBoxCategorias = New System.Windows.Forms.ListBox()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.ListarCategoriasDePlatosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.BuscarPlatoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PorNombreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PorDescripciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -64,18 +63,12 @@ Partial Class panelDeVista
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ListarCategoriasDePlatosToolStripMenuItem, Me.BuscarPlatoToolStripMenuItem, Me.CerrarSesiónToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BuscarPlatoToolStripMenuItem, Me.CerrarSesiónToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(839, 24)
         Me.MenuStrip1.TabIndex = 2
         Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'ListarCategoriasDePlatosToolStripMenuItem
-        '
-        Me.ListarCategoriasDePlatosToolStripMenuItem.Name = "ListarCategoriasDePlatosToolStripMenuItem"
-        Me.ListarCategoriasDePlatosToolStripMenuItem.Size = New System.Drawing.Size(155, 20)
-        Me.ListarCategoriasDePlatosToolStripMenuItem.Text = "Listar categorias de platos"
         '
         'BuscarPlatoToolStripMenuItem
         '
@@ -122,7 +115,6 @@ Partial Class panelDeVista
     Friend WithEvents ListBox1 As System.Windows.Forms.ListBox
     Friend WithEvents ListBoxCategorias As System.Windows.Forms.ListBox
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
-    Friend WithEvents ListarCategoriasDePlatosToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents BuscarPlatoToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PorNombreToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PorDescripciónToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

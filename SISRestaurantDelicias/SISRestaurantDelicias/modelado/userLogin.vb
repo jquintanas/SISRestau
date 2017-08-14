@@ -1,7 +1,7 @@
-﻿|Imports System.Text.RegularExpressions
+﻿Imports System.Text.RegularExpressions
 
 Public Class userLogin : Inherits basicUser
-    Protected Friend diccionarioCategoria As List(Of String)
+    Protected Friend diccionarioCategoria As New List(Of String)
     Protected Friend keyC As List(Of String)
     Protected Friend keyCSinRepeticiones As List(Of String)
     Protected Friend platillos As List(Of platillos)
@@ -31,33 +31,49 @@ Public Class userLogin : Inherits basicUser
         Return Me.keyCSinRepeticiones(op - 1)
     End Function
 
-    Public Function buscarPlato(ByVal nombre As String) As Integer
+    Public Function buscarPlatoN(ByVal nombre As String) As Collection
         Dim bandera As Integer = 0
         Dim op1 As String
+        Dim colR As New Collection
+        Dim lip As New List(Of platillos)
         op1 = ".*" + nombre + ".*"
         Dim nombrePlatilloRegex As Regex = New Regex(op1)
         For i = 0 To Me.platillos.Count
             Dim m As Match = nombrePlatilloRegex.Match(Me.platillos(i).Fullnombre)
             If m.Success Then
                 bandera = 1
-                Dim salida As String
-                salida = "nombre: " + Me.platillos(1).Fullnombre + " servido: " + Me.platillos(2).Fullservido + " tipo: " + Me.platillos(3).Fulltipo + " restaurante: " + Me.platillos(4).FullRestaurant
-                panelDeVista.ListBox1.Items.Add(salida)
+                lip.Add(Me.platillos(i))
             End If
         Next
-        Return bandera
+        colR.Add(bandera)
+        colR.Add(lip)
+        Return colR
+    End Function
+
+    Public Function buscarPlatoD(ByVal nombre As String) As Collection
+        Dim bandera As Integer = 0
+        Dim op1 As String
+        Dim colR As New Collection
+        Dim lip As New List(Of platillos)
+        op1 = ".*" + nombre + ".*"
+        Dim nombrePlatilloRegex As Regex = New Regex(op1)
+        For i = 0 To Me.platillos.Count
+            Dim m As Match = nombrePlatilloRegex.Match(Me.platillos(i).Fulldescripcion)
+            If m.Success Then
+                bandera = 1
+                lip.Add(Me.platillos(i))
+            End If
+        Next
+        colR.Add(bandera)
+        colR.Add(lip)
+        Return colR
     End Function
 
     Public Sub listarCategoria()
-        Dim I As Integer = 1
         For Each plato As platillos In Me.platillos
             If Me.diccionarioCategoria.Contains(plato.FullCategoria) = False Then
                 Me.diccionarioCategoria.Add(plato.FullCategoria)
             End If
-        Next
-        For Each cate As String In Me.diccionarioCategoria
-            panelDeVista.ListBoxCategorias.Items.Add(cate)
-            I = I + 1
         Next
     End Sub
 

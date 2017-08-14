@@ -16,7 +16,7 @@
         Dim listC As New List(Of categoria)
         dicT = lecturaDeArchivo.leerArchivo(ruta)
         For Each col As Collection In dicT.Values
-            listC.Add(col.Item(1).Item(1))
+            listC.Add(New categoria(col.Item(1).Item(0), col.Item(1).Item(1)))
         Next
         Return listC
     End Function
