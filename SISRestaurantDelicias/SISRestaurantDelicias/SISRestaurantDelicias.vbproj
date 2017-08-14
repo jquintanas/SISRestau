@@ -75,6 +75,7 @@
     <Compile Include="control\constantes.vb" />
     <Compile Include="control\funcionesComunes.vb" />
     <Compile Include="control\lecturaDeArchivo.vb" />
+    <Compile Include="control\utilRestaurante.vb" />
     <Compile Include="main.Designer.vb">
       <DependentUpon>main.vb</DependentUpon>
     </Compile>

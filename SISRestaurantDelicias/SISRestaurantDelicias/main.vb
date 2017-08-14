@@ -16,7 +16,10 @@
         'Me.user = New estudiante("123", "jonathan", "000360", constantes.estudiante, lisp, claves, pago)
         Me.user = New Asistente("123", "jonathan", "000360", constantes.asistenteR, lisp, claves, restaurant)
         Me.Panel1.Controls.Clear()
-        Dim frm1 As New panelDeVistaAsistente(Me.user)
+        'Dim frm1 As New panelDeVistaAsistente(Me.user)
+        Dim listU As New List(Of basicUser)
+        listU.Add(Me.user)
+        Dim frm1 As New login(listU)
         Me.Panel1.Controls.Add(frm1.Panel1)
     End Sub
 

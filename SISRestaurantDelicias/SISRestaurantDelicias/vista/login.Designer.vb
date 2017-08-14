@@ -22,19 +22,24 @@ Partial Class login
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(login))
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtuser = New System.Windows.Forms.TextBox()
+        Me.btnlogin = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtPass = New System.Windows.Forms.TextBox()
-        Me.btnlogin = New System.Windows.Forms.Button()
+        Me.txtuser = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.cmbresta = New System.Windows.Forms.ComboBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.cmbresta)
+        Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.btnlogin)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.txtPass)
@@ -46,30 +51,14 @@ Partial Class login
         Me.Panel1.Size = New System.Drawing.Size(839, 445)
         Me.Panel1.TabIndex = 0
         '
-        'PictureBox1
+        'btnlogin
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(298, 8)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(222, 203)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(236, 244)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(43, 13)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Usuario"
-        '
-        'txtuser
-        '
-        Me.txtuser.Location = New System.Drawing.Point(298, 237)
-        Me.txtuser.Name = "txtuser"
-        Me.txtuser.Size = New System.Drawing.Size(222, 20)
-        Me.txtuser.TabIndex = 2
+        Me.btnlogin.Location = New System.Drawing.Point(336, 344)
+        Me.btnlogin.Name = "btnlogin"
+        Me.btnlogin.Size = New System.Drawing.Size(131, 32)
+        Me.btnlogin.TabIndex = 4
+        Me.btnlogin.Text = "Login"
+        Me.btnlogin.UseVisualStyleBackColor = True
         '
         'Label2
         '
@@ -88,14 +77,49 @@ Partial Class login
         Me.txtPass.Size = New System.Drawing.Size(222, 20)
         Me.txtPass.TabIndex = 2
         '
-        'btnlogin
+        'txtuser
         '
-        Me.btnlogin.Location = New System.Drawing.Point(361, 327)
-        Me.btnlogin.Name = "btnlogin"
-        Me.btnlogin.Size = New System.Drawing.Size(131, 55)
-        Me.btnlogin.TabIndex = 4
-        Me.btnlogin.Text = "Login"
-        Me.btnlogin.UseVisualStyleBackColor = True
+        Me.txtuser.Location = New System.Drawing.Point(298, 237)
+        Me.txtuser.Name = "txtuser"
+        Me.txtuser.Size = New System.Drawing.Size(222, 20)
+        Me.txtuser.TabIndex = 2
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(236, 244)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(43, 13)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Usuario"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(298, 8)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(222, 203)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(214, 315)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(65, 13)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "Restaurante"
+        '
+        'cmbresta
+        '
+        Me.cmbresta.FormattingEnabled = True
+        Me.cmbresta.Items.AddRange(New Object() {"Nueva Malisia", "Comerdor Celex", "Coca cola"})
+        Me.cmbresta.Location = New System.Drawing.Point(298, 307)
+        Me.cmbresta.Name = "cmbresta"
+        Me.cmbresta.Size = New System.Drawing.Size(222, 21)
+        Me.cmbresta.TabIndex = 6
         '
         'login
         '
@@ -118,4 +142,6 @@ Partial Class login
     Friend WithEvents txtuser As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents cmbresta As System.Windows.Forms.ComboBox
+    Friend WithEvents Label3 As System.Windows.Forms.Label
 End Class
