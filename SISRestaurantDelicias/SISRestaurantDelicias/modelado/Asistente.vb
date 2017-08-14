@@ -19,7 +19,7 @@
     End Function
 
     Public Function generarKey() As Integer
-        Return Me.platillos.Count
+        Return Me.platillos.Count + 1
     End Function
 
     Public Sub addPlatillo()
@@ -46,18 +46,12 @@
         nuevoPlatilloModificar.Show()
     End Sub
 
-    Public Sub listarPlatillos()
-        Dim panelV As New panelDeVista(Me)
-        For Each plato As platillos In Me.platillos
-            panelV.ListBox1.Items.Add(plato.Fullid)
-            panelV.ListBox1.Items.Add(plato.Fullnombre)
-            panelV.ListBox1.Items.Add(plato.FullCategoria)
-            panelV.ListBox1.Items.Add(plato.Fulldescripcion)
-            panelV.ListBox1.Items.Add(plato.FullRestaurant)
-            panelV.ListBox1.Items.Add(plato.Fulltipo)
-            panelV.ListBox1.Items.Add(plato.Fullservido)
-            panelV.ListBox1.Items.Add(plato.Fulldescripcion)
-            panelV.ListBox1.Items.Add("<-------------SISDelicias---------->")
-        Next
-    End Sub
+    Public Property listarPlatillos() As List(Of platillos)
+        Get
+            Return Me.platillos
+        End Get
+        Set(ByVal value As List(Of platillos))
+            Me.platillos = value
+        End Set
+    End Property
 End Class

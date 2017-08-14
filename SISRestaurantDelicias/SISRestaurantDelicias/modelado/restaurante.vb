@@ -1,28 +1,17 @@
 ﻿Public Class restaurante
     Private nombre As String
-    Private asistennte As Asistente
     Private direccion As String
     Private telefono As Integer
     Private dueno As String
     Protected Friend platillos As List(Of platillos)
 
-    Public Sub New(ByVal nombre As String, ByVal asistent As Asistente, ByVal direcci As String, ByVal telefono As Integer, ByVal dueno As String, ByVal platos As List(Of platillos))
+    Public Sub New(ByVal nombre As String, ByVal direcci As String, ByVal telefono As Integer, ByVal dueno As String, ByVal platos As List(Of platillos))
         Me.nombre = nombre
-        Me.asistennte = asistent
         Me.direccion = direcci
         Me.telefono = telefono
         Me.dueno = dueno
         Me.platillos = platos
     End Sub
-
-    Public Property fullAsistente() As Asistente
-        Get
-            Return Me.asistennte
-        End Get
-        Set(ByVal value As Asistente)
-            Me.asistennte = value
-        End Set
-    End Property
 
     Public Property fullDireccion() As String
         Get

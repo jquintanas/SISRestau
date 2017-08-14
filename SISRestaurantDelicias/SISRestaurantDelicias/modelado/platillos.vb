@@ -105,11 +105,11 @@
     End Property
 
     Public Function toString1() As String
-        Return Me.nombre + " su servido es: " + Me.servido + " es de tipo: " + Me.tipo + " se encuentra en el restaurante: " + Me.restaurante
+        Return "El plato se llama: " + Me.nombre + " su servido es: " + Me.servido + " es de tipo: " + Me.tipo + " se encuentra en el restaurante: " + Me.restaurante
     End Function
 
     Public Overrides Function toString() As String
-        Return "Su seleccion es: " + Me.nombre + " es de servido: " + Me.servido + " lo encuentra en el restaurante: " + Me.restaurante + " la categoria es: " + Me.categoria +
+        Return "Su seleccion es: " + Me.nombre + " es de servido: " + Me.servido + " lo encuentra en el restaurante: " + Me.restaurante + "\n la categoria es: " + Me.categoria +
             " los ingredientes son: " + Me.ingredientes + " Descripción: " + Me.descripcion
     End Function
 

@@ -31,43 +31,7 @@ Public Class userLogin : Inherits basicUser
         Return Me.keyCSinRepeticiones(op - 1)
     End Function
 
-    Public Function buscarPlatoN(ByVal nombre As String) As Collection
-        Dim bandera As Integer = 0
-        Dim op1 As String
-        Dim colR As New Collection
-        Dim lip As New List(Of platillos)
-        op1 = ".*" + nombre + ".*"
-        Dim nombrePlatilloRegex As Regex = New Regex(op1)
-        For i = 0 To Me.platillos.Count
-            Dim m As Match = nombrePlatilloRegex.Match(Me.platillos(i).Fullnombre)
-            If m.Success Then
-                bandera = 1
-                lip.Add(Me.platillos(i))
-            End If
-        Next
-        colR.Add(bandera)
-        colR.Add(lip)
-        Return colR
-    End Function
-
-    Public Function buscarPlatoD(ByVal nombre As String) As Collection
-        Dim bandera As Integer = 0
-        Dim op1 As String
-        Dim colR As New Collection
-        Dim lip As New List(Of platillos)
-        op1 = ".*" + nombre + ".*"
-        Dim nombrePlatilloRegex As Regex = New Regex(op1)
-        For i = 0 To Me.platillos.Count
-            Dim m As Match = nombrePlatilloRegex.Match(Me.platillos(i).Fulldescripcion)
-            If m.Success Then
-                bandera = 1
-                lip.Add(Me.platillos(i))
-            End If
-        Next
-        colR.Add(bandera)
-        colR.Add(lip)
-        Return colR
-    End Function
+    
 
     Public Sub listarCategoria()
         For Each plato As platillos In Me.platillos

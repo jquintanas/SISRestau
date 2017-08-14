@@ -22,7 +22,7 @@
                 Me.asis = us
             End If
         Next
-        Dim res As New restaurante(txtNombre.Text, Me.asis, txtDirec.Text, Convert.ToInt64(txtNombre.Text), txtDuen.Text, New List(Of platillos))
+        Dim res As New restaurante(txtNombre.Text, txtDirec.Text, Convert.ToInt64(txtNombre.Text), txtDuen.Text, New List(Of platillos))
         Me.user.restaurantes.Add(res)
     End Sub
 
