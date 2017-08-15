@@ -27,7 +27,7 @@
 
     Public Sub consulaDECompras()
         Dim form As New detallesDeSISPago
-        form.cargarTransacciones(Me.carnet.getCompras, True)
+        form.cargarCompras(Me.carnet.getCompras, True)
         form.Show()
     End Sub
 

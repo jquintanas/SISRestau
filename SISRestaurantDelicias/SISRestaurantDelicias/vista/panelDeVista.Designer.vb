@@ -30,13 +30,13 @@ Partial Class panelDeVista
         Me.PorNombreToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PorDescripciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SISCarnetInteligenteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CerrarSesiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NotaDeCreditoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NotaDeDebitoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultaDeSaldoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultaTransaccionesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ComprasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CreditosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CerrarSesiónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -100,12 +100,6 @@ Partial Class panelDeVista
         Me.SISCarnetInteligenteToolStripMenuItem.Size = New System.Drawing.Size(129, 20)
         Me.SISCarnetInteligenteToolStripMenuItem.Text = "SIS carnet Inteligente"
         '
-        'CerrarSesiónToolStripMenuItem
-        '
-        Me.CerrarSesiónToolStripMenuItem.Name = "CerrarSesiónToolStripMenuItem"
-        Me.CerrarSesiónToolStripMenuItem.Size = New System.Drawing.Size(88, 20)
-        Me.CerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión"
-        '
         'NotaDeCreditoToolStripMenuItem
         '
         Me.NotaDeCreditoToolStripMenuItem.Name = "NotaDeCreditoToolStripMenuItem"
@@ -134,14 +128,20 @@ Partial Class panelDeVista
         'ComprasToolStripMenuItem
         '
         Me.ComprasToolStripMenuItem.Name = "ComprasToolStripMenuItem"
-        Me.ComprasToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ComprasToolStripMenuItem.Size = New System.Drawing.Size(120, 22)
         Me.ComprasToolStripMenuItem.Text = "compras"
         '
         'CreditosToolStripMenuItem
         '
         Me.CreditosToolStripMenuItem.Name = "CreditosToolStripMenuItem"
-        Me.CreditosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CreditosToolStripMenuItem.Size = New System.Drawing.Size(120, 22)
         Me.CreditosToolStripMenuItem.Text = "creditos"
+        '
+        'CerrarSesiónToolStripMenuItem
+        '
+        Me.CerrarSesiónToolStripMenuItem.Name = "CerrarSesiónToolStripMenuItem"
+        Me.CerrarSesiónToolStripMenuItem.Size = New System.Drawing.Size(88, 20)
+        Me.CerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión"
         '
         'panelDeVista
         '

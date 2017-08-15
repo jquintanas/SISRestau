@@ -5,6 +5,7 @@
     Private panelve1 As estudianteP1
     Private panelve2 As estudianteP2
     Private sisSaldos As administradorDeSaldos
+    Private bd As Boolean
 
 
     Public Sub New(ByVal user As userLogin, ByVal b As Boolean)
@@ -15,13 +16,14 @@
         ' Add any initialization after the InitializeComponent() call.
         Me.user = user
         Me.panelve1 = New estudianteP1(Me.user)
+        Me.bd = b
         If b = True Then
-            Me.SISCarnetInteligenteToolStripMenuItem.Visible = True
+            Me.SISCarnetInteligenteToolStripMenuItem.Enabled = True
             Dim car As carnetInteligente
             car = Me.user.carnetInteligente
             sisSaldos = New administradorDeSaldos(car)
         Else
-            Me.SISCarnetInteligenteToolStripMenuItem.Visible = False
+            Me.SISCarnetInteligenteToolStripMenuItem.Enabled = False
 
         End If
     End Sub
@@ -97,5 +99,17 @@
     Private Sub CreditosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CreditosToolStripMenuItem.Click
         sisSaldos.consultaMovimientos()
 
+    End Sub
+
+    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
+        If Me.bd = True Then
+            Me.SISCarnetInteligenteToolStripMenuItem.Enabled = True
+            Dim car As carnetInteligente
+            car = Me.user.carnetInteligente
+            sisSaldos = New administradorDeSaldos(car)
+        Else
+            Me.SISCarnetInteligenteToolStripMenuItem.Enabled = False
+
+        End If
     End Sub
 End Class

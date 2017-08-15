@@ -24,9 +24,10 @@
     Public Sub pagar(ByVal monto As Double) Implements IFormaDePago2.pagar
         If Me.montoDeCuenta > monto Then
             Me.montoDeCuenta = Me.montoDeCuenta - monto
+            generarOrden()
             Me.listaDeTransacciones.Add(New transacciones("Se realiza un debito de la cuenta", New Date))
             Me.listaCompras.Add(New compras(Me.orden, New Date))
-            generarOrden()
+
         Else
             Dim respuesta As String
             Dim monT As Double = monto - Me.montoDeCuenta
@@ -34,10 +35,11 @@
             If respuesta = vbYes Then
                 Me.montoDeCuenta = 0
                 Me.notaDeCredito = monT
+                generarOrden()
                 Me.listaDeTransacciones.Add(New transacciones("Se realiza un debito de la cuenta", New Date))
                 Me.listaDeTransacciones.Add(New transacciones("Se realizo una nota de credito", New Date))
                 Me.listaCompras.Add(New compras(Me.orden, New Date))
-                generarOrden()
+
 
             End If
         End If
