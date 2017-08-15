@@ -7,9 +7,9 @@
         dicT = lecturaDeArchivo.leerArchivo(ruta)
         Dim i As Integer = 0
         For Each col As Collection In dicT.Values
-            lrest.Add(New platillos(col.Item(1).Item(0), col.Item(1).Item(1), col.Item(1).Item(2), col.Item(1).Item(3),
-                                     col.Item(1).Item(4), col.Item(1).Item(5), col.Item(1).Item(6), col.Item(1).Item(7),
-                                     col.Item(1).Item(8)))
+            lrest.Add(New platillos(col.Item(1).Item(0), col.Item(1).Item(1), col.Item(1).Item(5), col.Item(1).Item(6),
+                                     col.Item(1).Item(7), col.Item(1).Item(8), col.Item(1).Item(3), col.Item(1).Item(2),
+                                     col.Item(1).Item(4)))
         Next
         Return lrest
 

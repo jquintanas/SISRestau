@@ -1,5 +1,5 @@
 ﻿Public Class test
-
+    Public Shared Property DateString As String
     Private Sub test_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
     End Sub
@@ -12,5 +12,8 @@
         For Each pla As platillos In lista
             MsgBox(pla.Fullnombre)
         Next
+        MsgBox("The formatted date is " & Format(Now, "dddd, d MMM yyyy"))
+        
+
     End Sub
 End Class

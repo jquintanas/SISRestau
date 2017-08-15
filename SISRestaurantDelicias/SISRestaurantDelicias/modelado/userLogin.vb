@@ -55,7 +55,7 @@ Public Class userLogin : Inherits basicUser
 
     Public Function mostrarPlatillo(ByVal id As String) As Collection
         Dim retorno As Integer
-        Dim colR As Collection
+        Dim colR As New Collection
         For Each plato As platillos In Me.platillos
             If plato.Fullid = id Then
                 colR.Add(plato)

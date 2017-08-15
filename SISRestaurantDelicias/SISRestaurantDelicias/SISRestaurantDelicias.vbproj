@@ -77,6 +77,7 @@
     <Compile Include="control\lecturaDeArchivo.vb" />
     <Compile Include="control\utilPlatillos.vb" />
     <Compile Include="control\utilRestaurante.vb" />
+    <Compile Include="control\utilUser.vb" />
     <Compile Include="main.Designer.vb">
       <DependentUpon>main.vb</DependentUpon>
     </Compile>
@@ -85,6 +86,11 @@
     </Compile>
     <Compile Include="modelado\Asistente.vb" />
     <Compile Include="modelado\categoria.vb" />
+    <Compile Include="modelado\decorator\almuerzoEjecutivo.vb" />
+    <Compile Include="modelado\decorator\almuerzoEstudiantil.vb" />
+    <Compile Include="modelado\decorator\decoratorBebida.vb" />
+    <Compile Include="modelado\decorator\decoratorPostre.vb" />
+    <Compile Include="modelado\decorator\IAlmuerzo.vb" />
     <Compile Include="modelado\estudiante.vb" />
     <Compile Include="modelado\basicUser.vb" />
     <Compile Include="modelado\factoryMethod\creadorDePlatillos.vb" />
@@ -92,8 +98,15 @@
     <Compile Include="modelado\factoryMethod\listaPlatillos.vb" />
     <Compile Include="modelado\factoryMethod\platilloConcretoNuevaMalicia.vb" />
     <Compile Include="modelado\factoryMethod\platillosConcretoOtroRestaurante.vb" />
+    <Compile Include="modelado\formaDePago\administradorDeSaldos.vb" />
+    <Compile Include="modelado\formaDePago\carnetInteligente.vb" />
+    <Compile Include="modelado\formaDePago\compras.vb" />
     <Compile Include="modelado\formaDePago\IFormaDePago.vb" />
-    <Compile Include="modelado\listaPlatillos2.vb" />
+    <Compile Include="modelado\formaDePago\otraFormaDePago.vb" />
+    <Compile Include="modelado\formaDePago\otraFormaDePagoAdapter.vb" />
+    <Compile Include="modelado\formaDePago\tarjetaCreditoAdapter.vb" />
+    <Compile Include="modelado\formaDePago\tarjetaDeCredito.vb" />
+    <Compile Include="modelado\formaDePago\transacciones.vb" />
     <Compile Include="modelado\platillos.vb" />
     <Compile Include="modelado\restaurante.vb" />
     <Compile Include="modelado\userAdmin.vb" />
@@ -119,6 +132,12 @@
     <Compile Include="test.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="vista\detallesDeSISPago.Designer.vb">
+      <DependentUpon>detallesDeSISPago.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vista\detallesDeSISPago.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vista\estudianteP1.Designer.vb">
       <DependentUpon>estudianteP1.vb</DependentUpon>
     </Compile>
@@ -129,6 +148,12 @@
       <DependentUpon>estudianteP2.vb</DependentUpon>
     </Compile>
     <Compile Include="vista\estudianteP2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista\home.Designer.vb">
+      <DependentUpon>home.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vista\home.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vista\login.Designer.vb">
@@ -187,11 +212,17 @@
     <EmbeddedResource Include="test.resx">
       <DependentUpon>test.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="vista\detallesDeSISPago.resx">
+      <DependentUpon>detallesDeSISPago.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vista\estudianteP1.resx">
       <DependentUpon>estudianteP1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\estudianteP2.resx">
       <DependentUpon>estudianteP2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\home.resx">
+      <DependentUpon>home.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\login.resx">
       <DependentUpon>login.vb</DependentUpon>

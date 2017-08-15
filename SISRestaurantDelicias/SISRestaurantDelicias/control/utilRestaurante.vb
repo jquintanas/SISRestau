@@ -1,6 +1,5 @@
 ﻿Module utilRestaurante
     Public Function crearRestaurantes(ByVal ruta As String) As List(Of restaurante)
-        'ByVal platos As List(Of List(Of platillos))
         Dim lrest As New List(Of restaurante)
         Dim dicT As New Dictionary(Of String, Collection)
         dicT = lecturaDeArchivo.leerArchivo(ruta)

@@ -7,7 +7,7 @@
     Public Function CrearListaRestaurantes() As System.Collections.Generic.List(Of platillos) Implements factoryCreator.CrearListaRestaurantes
         Dim malicia As New platilloConcretoNuevaMalicia("dataAccess/nuevamalicia.txt")
         Dim otro As New platillosConcretoOtroRestaurante("dataAccess/otroRestau.txt")
-        If Me.nombre = "nuevaMalicia" Then
+        If Me.nombre = constantes.malicia Then
             malicia.crearListaPlatillos()
             Return malicia.getLista
         Else

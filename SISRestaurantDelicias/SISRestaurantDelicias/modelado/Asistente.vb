@@ -36,6 +36,7 @@
         Dim platillo As platillos
         platillo = getPlatillo(id)
         Dim nuevoPlatilloModificar As New nuevoPlatillo(Me)
+        nuevoPlatilloModificar.txtnombre.Text = platillo.Fullnombre
         nuevoPlatilloModificar.txtKey.Text = platillo.Fullid
         nuevoPlatilloModificar.txtdescrip.Text = platillo.Fulldescripcion
         nuevoPlatilloModificar.txtimagenes.Text = platillo.FullImagenes

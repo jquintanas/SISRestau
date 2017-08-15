@@ -48,4 +48,10 @@
             MsgBox("Plato invalido no selecciono uno existente")
         End If
     End Sub
+
+    Private Sub CerrarSesiónToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CerrarSesiónToolStripMenuItem.Click
+        main.Close()
+        home.Show()
+
+    End Sub
 End Class

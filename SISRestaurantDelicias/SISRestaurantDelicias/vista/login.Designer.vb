@@ -24,14 +24,14 @@ Partial Class login
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(login))
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.cmbresta = New System.Windows.Forms.ComboBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.btnlogin = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtPass = New System.Windows.Forms.TextBox()
         Me.txtuser = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.cmbresta = New System.Windows.Forms.ComboBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -50,6 +50,24 @@ Partial Class login
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(839, 445)
         Me.Panel1.TabIndex = 0
+        '
+        'cmbresta
+        '
+        Me.cmbresta.FormattingEnabled = True
+        Me.cmbresta.Items.AddRange(New Object() {"Nueva Malisia", "Comerdor Celex"})
+        Me.cmbresta.Location = New System.Drawing.Point(298, 307)
+        Me.cmbresta.Name = "cmbresta"
+        Me.cmbresta.Size = New System.Drawing.Size(222, 21)
+        Me.cmbresta.TabIndex = 6
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(214, 315)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(65, 13)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "Restaurante"
         '
         'btnlogin
         '
@@ -102,24 +120,6 @@ Partial Class login
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(214, 315)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(65, 13)
-        Me.Label3.TabIndex = 5
-        Me.Label3.Text = "Restaurante"
-        '
-        'cmbresta
-        '
-        Me.cmbresta.FormattingEnabled = True
-        Me.cmbresta.Items.AddRange(New Object() {"Nueva Malisia", "Comerdor Celex", "Coca cola"})
-        Me.cmbresta.Location = New System.Drawing.Point(298, 307)
-        Me.cmbresta.Name = "cmbresta"
-        Me.cmbresta.Size = New System.Drawing.Size(222, 21)
-        Me.cmbresta.TabIndex = 6
         '
         'login
         '
