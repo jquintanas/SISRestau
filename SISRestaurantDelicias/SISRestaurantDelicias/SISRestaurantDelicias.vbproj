@@ -75,6 +75,7 @@
     <Compile Include="control\constantes.vb" />
     <Compile Include="control\funcionesComunes.vb" />
     <Compile Include="control\lecturaDeArchivo.vb" />
+    <Compile Include="control\utilPlatillos.vb" />
     <Compile Include="control\utilRestaurante.vb" />
     <Compile Include="main.Designer.vb">
       <DependentUpon>main.vb</DependentUpon>
@@ -86,8 +87,13 @@
     <Compile Include="modelado\categoria.vb" />
     <Compile Include="modelado\estudiante.vb" />
     <Compile Include="modelado\basicUser.vb" />
+    <Compile Include="modelado\factoryMethod\creadorDePlatillos.vb" />
+    <Compile Include="modelado\factoryMethod\factoryCreator.vb" />
+    <Compile Include="modelado\factoryMethod\listaPlatillos.vb" />
+    <Compile Include="modelado\factoryMethod\platilloConcretoNuevaMalicia.vb" />
+    <Compile Include="modelado\factoryMethod\platillosConcretoOtroRestaurante.vb" />
     <Compile Include="modelado\formaDePago\IFormaDePago.vb" />
-    <Compile Include="modelado\listaPlatillos.vb" />
+    <Compile Include="modelado\listaPlatillos2.vb" />
     <Compile Include="modelado\platillos.vb" />
     <Compile Include="modelado\restaurante.vb" />
     <Compile Include="modelado\userAdmin.vb" />
@@ -106,6 +112,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="test.Designer.vb">
+      <DependentUpon>test.vb</DependentUpon>
+    </Compile>
+    <Compile Include="test.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="vista\estudianteP1.Designer.vb">
       <DependentUpon>estudianteP1.vb</DependentUpon>
@@ -172,6 +184,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="test.resx">
+      <DependentUpon>test.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="vista\estudianteP1.resx">
       <DependentUpon>estudianteP1.vb</DependentUpon>
     </EmbeddedResource>
@@ -212,6 +227,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

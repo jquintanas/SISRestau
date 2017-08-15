@@ -1,4 +1,4 @@
-﻿Public Class listaPlatillos
+﻿Public Class listaPlatillos2
     Private key As List(Of String)
     Private platillos As List(Of platillos)
 

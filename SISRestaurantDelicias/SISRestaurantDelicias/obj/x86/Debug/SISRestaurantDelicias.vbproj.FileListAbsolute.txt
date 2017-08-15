@@ -35,3 +35,4 @@ G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\D
 G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\Debug\SISRestaurantDelicias.estudianteP2.resources
 G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\Debug\SISRestaurantDelicias.login.resources
 G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\Debug\SISRestaurantDelicias.panelDeVistaAsistente.resources
+G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\Debug\SISRestaurantDelicias.test.resources
