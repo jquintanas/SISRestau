@@ -48,4 +48,48 @@
             End If
         End While
     End Function
+
+    Public Function crearTarjeta() As tarjetaCreditoAdapter
+        Dim id As String = InputBox("Ingrese el numero de la tarjeta")
+        Dim cvc As Integer = Convert.ToInt64(InputBox("Ingrese el cvc de su tarjeta"))
+        Dim caduca As String = InputBox("Ingrese la fecha de caducidad de su tarjeta")
+        Return New tarjetaCreditoAdapter(id, cvc, caduca)
+    End Function
+
+    Public Function crearCarnetInteligente(ByVal user As basicUser) As carnetInteligente
+        MsgBox("Se le asignara un monto aleatorio de salgo", MsgBoxStyle.Information)
+        Randomize()
+        Dim saldo As Double = CDbl(Int((10 * Rnd()) + 5))
+        Return New carnetInteligente(user.id, saldo)
+    End Function
+
+    Public Function seleccionarFormaPago(ByVal user As basicUser) As IFormaDePago2
+        Dim mensaje As String = MsgBox("Desea pagar con tarjeta de credito?", MsgBoxStyle.YesNo)
+        If mensaje = vbYes Then
+            Return crearTarjeta()
+        Else
+            Return crearCarnetInteligente(user)
+        End If
+    End Function
+
+    Public Function login(ByVal luser As List(Of basicUser), ByVal user As String, ByVal pas As String) As Collection
+        Dim bandera As Boolean = False
+        Dim retorno As New Collection
+        Dim userL As basicUser
+        For Each us As basicUser In luser
+            If us.id = user Then
+                If us.pasword = pas Then
+                    bandera = True
+                    userL = us
+                Else
+                    MsgBox("La contraseña ingresa es invalida", MsgBoxStyle.Critical)
+                End If
+            End If
+        Next
+        retorno.Add(userL)
+        retorno.Add(bandera)
+        Return retorno
+    End Function
+
+
 End Module

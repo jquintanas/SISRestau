@@ -59,6 +59,7 @@ Partial Class login
         Me.cmbresta.Name = "cmbresta"
         Me.cmbresta.Size = New System.Drawing.Size(222, 21)
         Me.cmbresta.TabIndex = 6
+        Me.cmbresta.Visible = False
         '
         'Label3
         '
@@ -68,6 +69,7 @@ Partial Class login
         Me.Label3.Size = New System.Drawing.Size(65, 13)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Restaurante"
+        Me.Label3.Visible = False
         '
         'btnlogin
         '
