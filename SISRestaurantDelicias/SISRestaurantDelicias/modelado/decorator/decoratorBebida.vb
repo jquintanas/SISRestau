@@ -2,7 +2,7 @@
 
 
 
-    Private precio As Double = 0.75
+    Private precio As Double = constantes.bebida
     Public Sub New(ByVal pla As IAlmuerzo)
         MyBase.new(pla)
     End Sub

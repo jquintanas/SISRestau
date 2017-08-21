@@ -8,7 +8,7 @@
     End Sub
 
     Public Sub crearAlmuerzo() Implements IAlmuerzo.crearAlmuerzo
-        MsgBox("Usted tiene un almuerzo estudiantil y tiene un precio de: $" + Convert.ToString(Me.precio), MsgBoxStyle.Information)
+        MsgBox("Usted tiene un almuerzo tiene un precio de: $" + Convert.ToString(Me.precio), MsgBoxStyle.Information)
     End Sub
 
     Public Sub aumentarPrecio(ByVal precio As Double) Implements IAlmuerzo.aumentarPrecio

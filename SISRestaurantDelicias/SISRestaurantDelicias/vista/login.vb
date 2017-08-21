@@ -106,5 +106,11 @@
         Me.Panel1.Controls.Clear()
         Dim frm1 As New panelDeVista(Me.userL, Me.bpago)
         Me.Panel1.Controls.Add(frm1.Panel1)
+        Dim meVista As New IVista(Me.userL, Me.bpago, "Malicia", Color.Aqua)
+        Dim vistaT As New vistaGlobal(meVista)
+        vistaT.construir()
+        vistaT.Show()
     End Sub
+
+    
 End Class

@@ -48,6 +48,10 @@
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -107,6 +111,7 @@
     <Compile Include="modelado\formaDePago\tarjetaCreditoAdapter.vb" />
     <Compile Include="modelado\formaDePago\tarjetaDeCredito.vb" />
     <Compile Include="modelado\formaDePago\transacciones.vb" />
+    <Compile Include="modelado\IVista.vb" />
     <Compile Include="modelado\platillos.vb" />
     <Compile Include="modelado\restaurante.vb" />
     <Compile Include="modelado\userAdmin.vb" />
@@ -148,12 +153,6 @@
       <DependentUpon>estudianteP2.vb</DependentUpon>
     </Compile>
     <Compile Include="vista\estudianteP2.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="vista\home.Designer.vb">
-      <DependentUpon>home.vb</DependentUpon>
-    </Compile>
-    <Compile Include="vista\home.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="vista\login.Designer.vb">
@@ -198,6 +197,12 @@
     <Compile Include="vista\panelDeVistaAsistente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="vista\vistaGlobal.Designer.vb">
+      <DependentUpon>vistaGlobal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vista\vistaGlobal.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="main.resx">
@@ -221,9 +226,6 @@
     <EmbeddedResource Include="vista\estudianteP2.resx">
       <DependentUpon>estudianteP2.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="vista\home.resx">
-      <DependentUpon>home.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="vista\login.resx">
       <DependentUpon>login.vb</DependentUpon>
     </EmbeddedResource>
@@ -245,6 +247,9 @@
     <EmbeddedResource Include="vista\panelDeVistaAsistente.resx">
       <DependentUpon>panelDeVistaAsistente.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="vista\vistaGlobal.resx">
+      <DependentUpon>vistaGlobal.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -258,7 +263,18 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chef-2-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo login.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

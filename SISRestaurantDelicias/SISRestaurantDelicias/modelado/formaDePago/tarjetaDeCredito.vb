@@ -16,13 +16,15 @@
 
     End Sub
 
-    Public Sub pagar(ByVal monto As Double)
+    Public Function pagar(ByVal monto As Double) As Boolean
         Randomize()
         Dim value As Integer = CInt(Int((2 * Rnd()) + 1))
         If value = 1 Then
             generarOrden()
+            Return True
         Else
             MsgBox("La tarjeta no tiene fondos", MsgBoxStyle.Critical)
+            Return False
         End If
-    End Sub
+    End Function
 End Class

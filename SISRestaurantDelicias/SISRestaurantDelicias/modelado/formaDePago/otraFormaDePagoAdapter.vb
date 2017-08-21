@@ -9,8 +9,7 @@
 
     End Sub
 
-    Public Sub pagar(ByVal monto As Double) Implements IFormaDePago2.pagar
-        Me.pagar(monto)
-
-    End Sub
+    Public Function pagar(ByVal monto As Double) As Boolean Implements IFormaDePago2.pagar
+        Return Me.pagar(monto)
+    End Function
 End Class

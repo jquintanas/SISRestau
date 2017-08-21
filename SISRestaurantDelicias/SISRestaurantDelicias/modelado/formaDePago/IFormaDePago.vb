@@ -1,5 +1,5 @@
 ﻿Public Interface IFormaDePago2
-    Sub pagar(ByVal monto As Double)
+    Function pagar(ByVal monto As Double) As Boolean
     Sub generarOrden()
 End Interface
 

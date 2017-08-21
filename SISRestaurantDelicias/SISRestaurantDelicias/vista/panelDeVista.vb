@@ -67,7 +67,7 @@
 
     Private Sub CerrarSesiónToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CerrarSesiónToolStripMenuItem.Click
         main.Close()
-        home.Show()
+        main.Show()
     End Sub
 
 

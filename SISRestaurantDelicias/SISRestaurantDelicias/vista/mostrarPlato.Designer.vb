@@ -27,8 +27,11 @@ Partial Class mostrarPlato
         Me.checpos = New System.Windows.Forms.CheckBox()
         Me.checkbebida = New System.Windows.Forms.CheckBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.checkestu = New System.Windows.Forms.CheckBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.rBEstu = New System.Windows.Forms.RadioButton()
+        Me.rbEje = New System.Windows.Forms.RadioButton()
         Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
         'txtDescripcion
@@ -42,20 +45,19 @@ Partial Class mostrarPlato
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.checkestu)
-        Me.GroupBox1.Controls.Add(Me.checpos)
-        Me.GroupBox1.Controls.Add(Me.checkbebida)
+        Me.GroupBox1.Controls.Add(Me.rbEje)
+        Me.GroupBox1.Controls.Add(Me.rBEstu)
         Me.GroupBox1.Location = New System.Drawing.Point(18, 141)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(146, 108)
+        Me.GroupBox1.Size = New System.Drawing.Size(108, 83)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Seleccione su orden"
+        Me.GroupBox1.Text = "Tipo de Almuerzo"
         '
         'checpos
         '
         Me.checpos.AutoSize = True
-        Me.checpos.Location = New System.Drawing.Point(17, 77)
+        Me.checpos.Location = New System.Drawing.Point(6, 43)
         Me.checpos.Name = "checpos"
         Me.checpos.Size = New System.Drawing.Size(56, 17)
         Me.checpos.TabIndex = 1
@@ -65,7 +67,7 @@ Partial Class mostrarPlato
         'checkbebida
         '
         Me.checkbebida.AutoSize = True
-        Me.checkbebida.Location = New System.Drawing.Point(17, 54)
+        Me.checkbebida.Location = New System.Drawing.Point(6, 20)
         Me.checkbebida.Name = "checkbebida"
         Me.checkbebida.Size = New System.Drawing.Size(59, 17)
         Me.checkbebida.TabIndex = 0
@@ -74,28 +76,53 @@ Partial Class mostrarPlato
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(183, 177)
+        Me.Button1.Location = New System.Drawing.Point(100, 243)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "Comprar"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'checkestu
+        'GroupBox2
         '
-        Me.checkestu.AutoSize = True
-        Me.checkestu.Location = New System.Drawing.Point(17, 28)
-        Me.checkestu.Name = "checkestu"
-        Me.checkestu.Size = New System.Drawing.Size(119, 17)
-        Me.checkestu.TabIndex = 2
-        Me.checkestu.Text = "Almuerzo estudiantil"
-        Me.checkestu.UseVisualStyleBackColor = True
+        Me.GroupBox2.Controls.Add(Me.checkbebida)
+        Me.GroupBox2.Controls.Add(Me.checpos)
+        Me.GroupBox2.Location = New System.Drawing.Point(144, 141)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(128, 86)
+        Me.GroupBox2.TabIndex = 3
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Adicionales"
+        Me.GroupBox2.Visible = False
+        '
+        'rBEstu
+        '
+        Me.rBEstu.AutoSize = True
+        Me.rBEstu.Location = New System.Drawing.Point(6, 20)
+        Me.rBEstu.Name = "rBEstu"
+        Me.rBEstu.Size = New System.Drawing.Size(73, 17)
+        Me.rBEstu.TabIndex = 0
+        Me.rBEstu.TabStop = True
+        Me.rBEstu.Text = "Estudiantil"
+        Me.rBEstu.UseVisualStyleBackColor = True
+        '
+        'rbEje
+        '
+        Me.rbEje.AutoSize = True
+        Me.rbEje.Location = New System.Drawing.Point(6, 47)
+        Me.rbEje.Name = "rbEje"
+        Me.rbEje.Size = New System.Drawing.Size(69, 17)
+        Me.rbEje.TabIndex = 1
+        Me.rbEje.TabStop = True
+        Me.rbEje.Text = "Ejecutivo"
+        Me.rbEje.UseVisualStyleBackColor = True
         '
         'mostrarPlato
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 261)
+        Me.ClientSize = New System.Drawing.Size(421, 278)
+        Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.txtDescripcion)
@@ -103,6 +130,8 @@ Partial Class mostrarPlato
         Me.Text = "mostrarPlato"
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -112,5 +141,7 @@ Partial Class mostrarPlato
     Friend WithEvents checpos As System.Windows.Forms.CheckBox
     Friend WithEvents checkbebida As System.Windows.Forms.CheckBox
     Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents checkestu As System.Windows.Forms.CheckBox
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents rbEje As System.Windows.Forms.RadioButton
+    Friend WithEvents rBEstu As System.Windows.Forms.RadioButton
 End Class

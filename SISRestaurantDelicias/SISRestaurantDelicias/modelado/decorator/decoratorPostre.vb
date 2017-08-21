@@ -1,7 +1,7 @@
 ﻿Public Class decoratorPostre : Inherits almuerzoEjecutivo
 
 
-    Private precio As Double = 0.5
+    Private precio As Double = constantes.postre
 
     Public Sub New(ByVal pla As IAlmuerzo)
         MyBase.New(pla)

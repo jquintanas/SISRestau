@@ -22,26 +22,28 @@ Partial Class main
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.MainPanel = New System.Windows.Forms.Panel()
         Me.SuspendLayout()
         '
-        'Panel1
+        'MainPanel
         '
-        Me.Panel1.Location = New System.Drawing.Point(5, 4)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(839, 445)
-        Me.Panel1.TabIndex = 0
+        Me.MainPanel.BackColor = System.Drawing.Color.Transparent
+        Me.MainPanel.Location = New System.Drawing.Point(5, 4)
+        Me.MainPanel.Name = "MainPanel"
+        Me.MainPanel.Size = New System.Drawing.Size(839, 445)
+        Me.MainPanel.TabIndex = 0
         '
         'main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(850, 455)
-        Me.Controls.Add(Me.Panel1)
+        Me.Controls.Add(Me.MainPanel)
         Me.Name = "main"
         Me.Text = "main"
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents MainPanel As System.Windows.Forms.Panel
 End Class

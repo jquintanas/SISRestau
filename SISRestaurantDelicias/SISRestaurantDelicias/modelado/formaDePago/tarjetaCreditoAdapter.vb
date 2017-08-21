@@ -7,8 +7,7 @@
         MsgBox("Orden Generada")
     End Sub
 
-    Public Sub pagar(ByVal monto As Double) Implements IFormaDePago2.pagar
-        Me.tarjeta.pagar(monto)
-
-    End Sub
+    Public Function pagar(ByVal monto As Double) As Boolean Implements IFormaDePago2.pagar
+        Return Me.tarjeta.pagar(monto)
+    End Function
 End Class

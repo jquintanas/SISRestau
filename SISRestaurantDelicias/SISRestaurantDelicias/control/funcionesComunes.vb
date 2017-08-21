@@ -91,5 +91,12 @@
         Return retorno
     End Function
 
+    Public Sub mostrarMensaje(ByVal bandera As Boolean)
+        If bandera = True Then
+            MsgBox("Gracias por su compra")
+            horarioDeRetiro()
+        End If
+    End Sub
+
 
 End Module

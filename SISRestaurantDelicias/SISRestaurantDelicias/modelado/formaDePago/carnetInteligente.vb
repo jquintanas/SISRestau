@@ -21,7 +21,7 @@
         MsgBox("Su compra se realizo con exito, el numero de orden es: " + Convert.ToString(value), MsgBoxStyle.Information)
     End Sub
 
-    Public Sub pagar(ByVal monto As Double) Implements IFormaDePago2.pagar
+    Public Function pagar(ByVal monto As Double) As Boolean Implements IFormaDePago2.pagar
         If Me.montoDeCuenta > monto Then
             Me.montoDeCuenta = Me.montoDeCuenta - monto
             generarOrden()
@@ -43,7 +43,8 @@
 
             End If
         End If
-    End Sub
+        Return True
+    End Function
 
     Public Property getMontoDeCuenta As Double
         Get
