@@ -49,8 +49,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>Resources\logo.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -270,10 +269,22 @@
     <None Include="Resources\Chef-2-icon.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\fondo login.jpeg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\logo.ico" />
+    <None Include="Resources\fondo2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnexit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnlogin.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -37,11 +37,13 @@ Partial Class main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.SISRestaurantDelicias.My.Resources.Resources.fondo2
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(850, 455)
+        Me.ControlBox = False
         Me.Controls.Add(Me.MainPanel)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Name = "main"
-        Me.Text = "main"
         Me.ResumeLayout(False)
 
     End Sub

@@ -15,11 +15,31 @@ SISRestaurantDelicias
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
+</member><member name="P:SISRestaurantDelicias.My.Resources.Resources.btnexit">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:SISRestaurantDelicias.My.Resources.Resources.btnlogin">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:SISRestaurantDelicias.My.Resources.Resources.Chef_2_icon">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:SISRestaurantDelicias.My.Resources.Resources.fondo_login">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:SISRestaurantDelicias.My.Resources.Resources.fondo2">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:SISRestaurantDelicias.My.Resources.Resources.logo">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:SISRestaurantDelicias.My.Resources.Resources.userLogo">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

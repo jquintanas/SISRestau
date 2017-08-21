@@ -22,15 +22,15 @@ Partial Class login
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(login))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.cmbresta = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.btnlogin = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtPass = New System.Windows.Forms.TextBox()
         Me.txtuser = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnlogin = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -38,6 +38,7 @@ Partial Class login
         '
         'Panel1
         '
+        Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.cmbresta)
         Me.Panel1.Controls.Add(Me.Label3)
         Me.Panel1.Controls.Add(Me.btnlogin)
@@ -64,28 +65,23 @@ Partial Class login
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(214, 315)
+        Me.Label3.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.Red
+        Me.Label3.Location = New System.Drawing.Point(190, 309)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(65, 13)
+        Me.Label3.Size = New System.Drawing.Size(92, 19)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Restaurante"
         Me.Label3.Visible = False
         '
-        'btnlogin
-        '
-        Me.btnlogin.Location = New System.Drawing.Point(336, 344)
-        Me.btnlogin.Name = "btnlogin"
-        Me.btnlogin.Size = New System.Drawing.Size(131, 32)
-        Me.btnlogin.TabIndex = 4
-        Me.btnlogin.Text = "Login"
-        Me.btnlogin.UseVisualStyleBackColor = True
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(218, 281)
+        Me.Label2.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Red
+        Me.Label2.Location = New System.Drawing.Point(196, 273)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(61, 13)
+        Me.Label2.Size = New System.Drawing.Size(86, 19)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "Contraseña"
         '
@@ -103,19 +99,45 @@ Partial Class login
         Me.txtuser.Name = "txtuser"
         Me.txtuser.Size = New System.Drawing.Size(222, 20)
         Me.txtuser.TabIndex = 2
+        Me.txtuser.Tag = ""
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(236, 244)
+        Me.Label1.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Red
+        Me.Label1.Location = New System.Drawing.Point(221, 237)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(43, 13)
+        Me.Label1.Size = New System.Drawing.Size(61, 19)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Usuario"
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.BackgroundImage = Global.SISRestaurantDelicias.My.Resources.Resources.btnexit
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.Location = New System.Drawing.Point(409, 349)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(100, 45)
+        Me.Button1.TabIndex = 7
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'btnlogin
+        '
+        Me.btnlogin.BackColor = System.Drawing.Color.Transparent
+        Me.btnlogin.BackgroundImage = Global.SISRestaurantDelicias.My.Resources.Resources.btnlogin
+        Me.btnlogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnlogin.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnlogin.Location = New System.Drawing.Point(288, 349)
+        Me.btnlogin.Name = "btnlogin"
+        Me.btnlogin.Size = New System.Drawing.Size(100, 45)
+        Me.btnlogin.TabIndex = 4
+        Me.btnlogin.UseVisualStyleBackColor = False
+        '
         'PictureBox1
         '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Image = Global.SISRestaurantDelicias.My.Resources.Resources.userLogo
         Me.PictureBox1.Location = New System.Drawing.Point(298, 8)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(222, 203)
@@ -129,6 +151,7 @@ Partial Class login
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(850, 455)
         Me.Controls.Add(Me.Panel1)
+        Me.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Name = "login"
         Me.Text = "login"
         Me.Panel1.ResumeLayout(False)
@@ -146,4 +169,5 @@ Partial Class login
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents cmbresta As System.Windows.Forms.ComboBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class
