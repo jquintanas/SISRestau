@@ -29,21 +29,8 @@
             ElseIf Me.userL.rol = constantes.asistenteR Then
 
                 If cmbresta.SelectedItem = constantes.malicia Then
-                    'Me.factoryPlato = New creadorDePlatillos(constantes.malicia)
-                    'Me.listPlatos = Me.factoryPlato.CrearListaRestaurantes()
-                    'For Each pla As platillos In Me.listPlatos
-                    '    Me.claves.Add(pla.Fullid)
-                    'Next
-                    'Me.rest = New restaurante(constantes.malicia, "Estoy en la fen", 123456, "El dueño", Me.listPlatos)
                     mRefactoring.construirMalicia(Me.factoryPlato, Me.listPlatos, Me.claves, Me.rest)
-
                 Else
-                    'Me.factoryPlato = New creadorDePlatillos(constantes.celex)
-                    'Me.listPlatos = Me.factoryPlato.CrearListaRestaurantes()
-                    'For Each pla As platillos In Me.listPlatos
-                    '    Me.claves.Add(pla.Fullid)
-                    'Next
-                    'Me.rest = New restaurante(constantes.celex, "Estoy en el celex", 123456, "El dueño", Me.listPlatos)
                     mRefactoring.contruirOtroRestaurante(Me.factoryPlato, Me.listPlatos, Me.claves, Me.rest)
                 End If
                 Me.userL = New Asistente(Me.userL.id, Me.userL.nombre, Me.userL.pasword, Me.userL.rol, Me.listPlatos, Me.claves, Me.rest)
@@ -62,17 +49,9 @@
 
     Private Sub cmbresta_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbresta.SelectedIndexChanged
         If cmbresta.SelectedItem = constantes.malicia Then
-            Me.factoryPlato = New creadorDePlatillos(constantes.malicia)
-            Me.listPlatos = Me.factoryPlato.CrearListaRestaurantes()
-            For Each pla As platillos In Me.listPlatos
-                Me.claves.Add(pla.Fullid)
-            Next
+            mRefactoring.construirMaliciaUsuario(Me.factoryPlato, Me.listPlatos, Me.claves)
         Else
-            Me.factoryPlato = New creadorDePlatillos(constantes.celex)
-            Me.listPlatos = Me.factoryPlato.CrearListaRestaurantes()
-            For Each pla As platillos In Me.listPlatos
-                Me.claves.Add(pla.Fullid)
-            Next
+            mRefactoring.construirOtroRestauranteUsuario(Me.factoryPlato, Me.listPlatos, Me.claves)
         End If
         Me.IPago = funcionesComunes.seleccionarFormaPago(Me.userL)
         If TypeName(Me.IPago) = "carnetInteligente" Then
@@ -83,9 +62,11 @@
 
         Me.userL = New estudiante(Me.userL.id, Me.userL.nombre, Me.userL.pasword, Me.userL.rol,
                                     Me.listPlatos, claves, Me.IPago)
-        Me.Panel1.Controls.Clear()
-        Dim frm1 As New panelDeVista(Me.userL, Me.bpago)
-        Me.Panel1.Controls.Add(frm1.Panel1)
+        txtuser.Clear()
+        txtPass.Clear()
+        cmbresta.Visible = False
+        Label3.Visible = False
+        main.Hide()
         Dim meVista As New IVista(Me.userL, Me.bpago, "Malicia", Color.Aqua)
         Dim vistaT As New vistaGlobal(meVista)
         vistaT.construir()
@@ -111,4 +92,5 @@
             btnlogin.Select()
         End If
     End Sub
+
 End Class

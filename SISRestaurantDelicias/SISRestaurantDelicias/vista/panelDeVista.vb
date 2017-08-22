@@ -6,9 +6,10 @@
     Private panelve2 As estudianteP2
     Private sisSaldos As administradorDeSaldos
     Private bd As Boolean
+    Private vista As vistaGlobal
 
 
-    Public Sub New(ByVal user As userLogin, ByVal b As Boolean)
+    Public Sub New(ByVal user As userLogin, ByVal b As Boolean, ByRef vista As vistaGlobal)
 
         ' This call is required by the designer.
         InitializeComponent()
@@ -17,6 +18,7 @@
         Me.user = user
         Me.panelve1 = New estudianteP1(Me.user)
         Me.bd = b
+        Me.vista = vista
         If b = True Then
             Me.SISCarnetInteligenteToolStripMenuItem.Enabled = True
             Dim car As carnetInteligente
@@ -66,7 +68,8 @@
     End Sub
 
     Private Sub CerrarSesiónToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CerrarSesiónToolStripMenuItem.Click
-        main.Close()
+        Me.vista.Close()
+
         main.Show()
     End Sub
 

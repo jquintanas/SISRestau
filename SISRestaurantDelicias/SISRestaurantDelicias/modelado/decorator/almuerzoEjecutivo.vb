@@ -12,7 +12,7 @@
     Public MustOverride Sub aumentarPrecio(ByVal precio As Double) Implements IAlmuerzo.aumentarPrecio
 
 
-    Public MustOverride Sub crearAlmuerzo() Implements IAlmuerzo.crearAlmuerzo
+    Public MustOverride Function crearAlmuerzo() As String Implements IAlmuerzo.crearAlmuerzo
 
     Public MustOverride Function getPrecio() As Double Implements IAlmuerzo.getPrecio
 

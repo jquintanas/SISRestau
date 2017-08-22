@@ -19,4 +19,21 @@
         rest = New restaurante(constantes.celex, "Estoy en el celex", 123456, "El dueño", listPlatos)
     End Sub
 
+    Public Sub construirMaliciaUsuario(ByRef factoryPlato As creadorDePlatillos, ByRef listPlatos As List(Of platillos), ByRef claves As List(Of String))
+        factoryPlato = New creadorDePlatillos(constantes.malicia)
+        listPlatos = factoryPlato.CrearListaRestaurantes()
+        For Each pla As platillos In listPlatos
+            claves.Add(pla.Fullid)
+        Next
+    End Sub
+
+    Public Sub construirOtroRestauranteUsuario(ByRef factoryPlato As creadorDePlatillos, ByRef listPlatos As List(Of platillos), ByRef claves As List(Of String))
+        factoryPlato = New creadorDePlatillos(constantes.celex)
+        listPlatos = factoryPlato.CrearListaRestaurantes()
+        For Each pla As platillos In listPlatos
+            claves.Add(pla.Fullid)
+        Next
+    End Sub
+
 End Module
+
