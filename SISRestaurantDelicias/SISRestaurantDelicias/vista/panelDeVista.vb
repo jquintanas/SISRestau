@@ -29,9 +29,6 @@
 
         End If
     End Sub
-    Private Sub panelDeVista_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
-    End Sub
 
     Private Sub PorNombreToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PorNombreToolStripMenuItem.Click
         Dim busq As String
@@ -69,14 +66,7 @@
 
     Private Sub CerrarSesiónToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CerrarSesiónToolStripMenuItem.Click
         Me.vista.Close()
-
         main.Show()
-    End Sub
-
-
-    Private Sub SISCarnetInteligenteToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SISCarnetInteligenteToolStripMenuItem.Click
-        
-
     End Sub
 
     Private Sub NotaDeCreditoToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles NotaDeCreditoToolStripMenuItem.Click
@@ -91,17 +81,14 @@
 
     Private Sub ConsultaDeSaldoToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ConsultaDeSaldoToolStripMenuItem.Click
         sisSaldos.consultarSaldoDeCuenta()
-
     End Sub
 
     Private Sub ComprasToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComprasToolStripMenuItem.Click
         sisSaldos.consulaDECompras()
-
     End Sub
 
     Private Sub CreditosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CreditosToolStripMenuItem.Click
         sisSaldos.consultaMovimientos()
-
     End Sub
 
     Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint

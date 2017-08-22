@@ -7,6 +7,7 @@
     Private claves As New List(Of String)
     Private rest As restaurante
     Private bpago As Boolean
+    Private meVista As IVista
 
     Public Sub New(ByVal use As List(Of basicUser))
         InitializeComponent()
@@ -27,17 +28,22 @@
                 cmbresta.Visible = True
                 Label3.Visible = True
             ElseIf Me.userL.rol = constantes.asistenteR Then
-
-                If cmbresta.SelectedItem = constantes.malicia Then
+                If Me.userL.restaurante = constantes.malicia Then
                     mRefactoring.construirMalicia(Me.factoryPlato, Me.listPlatos, Me.claves, Me.rest)
                 Else
                     mRefactoring.contruirOtroRestaurante(Me.factoryPlato, Me.listPlatos, Me.claves, Me.rest)
                 End If
                 Me.userL = New Asistente(Me.userL.id, Me.userL.nombre, Me.userL.pasword, Me.userL.rol, Me.listPlatos, Me.claves, Me.rest)
 
-                Me.Panel1.Controls.Clear()
-                Dim frm1 As New panelDeVistaAsistente(Me.userL)
-                Me.Panel1.Controls.Add(frm1.Panel1)
+                If Me.userL.restaurante = constantes.malicia Then
+                    Me.meVista = New IVista(Me.userL, Me.bpago, constantes.malicia, Color.Black)
+                Else
+                    Me.meVista = New IVista(Me.userL, Me.bpago, constantes.celex, Color.Red)
+                End If
+                main.Hide()
+                Dim vistaT As New vistaGlobal(Me.meVista)
+                vistaT.construirAsistente()
+                vistaT.Show()
             Else
                 MsgBox("En construccion")
             End If
@@ -60,6 +66,8 @@
             Me.bpago = False
         End If
 
+        
+
         Me.userL = New estudiante(Me.userL.id, Me.userL.nombre, Me.userL.pasword, Me.userL.rol,
                                     Me.listPlatos, claves, Me.IPago)
         txtuser.Clear()
@@ -67,7 +75,13 @@
         cmbresta.Visible = False
         Label3.Visible = False
         main.Hide()
-        Dim meVista As New IVista(Me.userL, Me.bpago, "Malicia", Color.Aqua)
+
+        If cmbresta.SelectedItem = constantes.malicia Then
+            Me.meVista = New IVista(Me.userL, Me.bpago, constantes.malicia, Color.Black)
+        Else
+            Me.meVista = New IVista(Me.userL, Me.bpago, constantes.celex, Color.Red)
+        End If
+
         Dim vistaT As New vistaGlobal(meVista)
         vistaT.construir()
         vistaT.Show()
@@ -76,10 +90,7 @@
     
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         main.Close()
-
     End Sub
-
-    
 
     Private Sub txtuser_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtuser.KeyPress
         If e.KeyChar = Convert.ToChar(Keys.Enter) Then

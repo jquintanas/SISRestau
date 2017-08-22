@@ -1,9 +1,10 @@
 ﻿Public Class panelDeVistaAsistente
     Private user As Asistente
-    Public Sub New(ByVal user As basicUser)
+    Private vista As vistaGlobal
+    Public Sub New(ByVal user As basicUser, ByVal vista As vistaGlobal)
         InitializeComponent()
         Me.user = user
-
+        Me.vista = vista
     End Sub
 
     Private Sub panelDeVistaAsistente_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -41,8 +42,8 @@
             If mensaje = vbNo Then
                 MsgBox("El platillo no sera modificado, gracias")
             Else
-                MsgBox("SE va a modificar el platillo")
-                Me.user.modificarPlatillo(Convert.ToInt64(Me.user.platillos.Item(op - 1).Fullid))
+                MsgBox("Se va a modificar el platillo")
+                Me.user.modificarPlatillo(Convert.ToInt64(Me.user.platillos.Item(op).Fullid))
             End If
         Else
             MsgBox("Plato invalido no selecciono uno existente")
@@ -51,6 +52,6 @@
 
     Private Sub CerrarSesiónToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CerrarSesiónToolStripMenuItem.Click
         main.Show()
-
+        Me.vista.Close()
     End Sub
 End Class

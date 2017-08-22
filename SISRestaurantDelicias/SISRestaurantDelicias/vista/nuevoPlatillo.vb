@@ -1,5 +1,6 @@
 ﻿Public Class nuevoPlatillo
     Private usuario As Asistente
+    Private bandera As Boolean
     Private Sub nuevoPlatillo_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
         Dim tmp As New Dictionary(Of String, Collection)
@@ -9,21 +10,26 @@
         Next
     End Sub
 
-    Public Sub New(ByVal user As Asistente)
+    Public Sub New(ByVal user As Asistente, ByVal bandera As Boolean)
 
         ' This call is required by the designer.
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
         Me.usuario = user
-
+        Me.bandera = bandera
     End Sub
 
     Private Sub btnSave_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSave.Click
         Dim platillo As New platillos(txtKey.Text, txtnombre.Text, cmbCate.SelectedItem, txtingredientes.Text, txtimagenes.Text,
                                       txtdescrip.Text, cmbTipo.SelectedItem, cmbServido.SelectedItem, Me.usuario.rest.fullNombre)
-        Me.usuario.platillos.Add(platillo)
-        MsgBox("Platillo Agregado")
+        If Me.bandera Then
+            Me.usuario.platillos.Add(platillo)
+            MsgBox("Platillo Agregado")
+        Else
+            Me.usuario.platillos.Item(Convert.ToInt64(txtKey.Text) - 1) = platillo
+            MsgBox("Platillo Modificado")
+        End If
         Me.Close()
 
     End Sub

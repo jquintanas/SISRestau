@@ -23,19 +23,19 @@
     End Function
 
     Public Sub addPlatillo()
-        Dim nuevoPlatilloF As New nuevoPlatillo(Me)
+        Dim nuevoPlatilloF As New nuevoPlatillo(Me, True)
         nuevoPlatilloF.txtKey.Text = Convert.ToString(generarKey())
         nuevoPlatilloF.Show()
     End Sub
 
     Public Function getPlatillo(ByVal id As Integer) As platillos
-        Return Me.platillos.Item(id)
+        Return Me.platillos.Item(id - 1)
     End Function
 
     Public Sub modificarPlatillo(ByVal id As Integer)
         Dim platillo As platillos
         platillo = getPlatillo(id)
-        Dim nuevoPlatilloModificar As New nuevoPlatillo(Me)
+        Dim nuevoPlatilloModificar As New nuevoPlatillo(Me, False)
         nuevoPlatilloModificar.txtnombre.Text = platillo.Fullnombre
         nuevoPlatilloModificar.txtKey.Text = platillo.Fullid
         nuevoPlatilloModificar.txtdescrip.Text = platillo.Fulldescripcion

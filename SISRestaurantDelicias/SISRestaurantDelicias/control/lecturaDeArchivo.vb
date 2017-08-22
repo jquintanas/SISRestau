@@ -21,7 +21,7 @@ Module lecturaDeArchivo
                 usuarios.Add(claves2)
                 retorno.Add(claves2(0), usuarios)
             Catch ex As Exception
-                MsgBox("error")
+
             End Try
         End While
 
