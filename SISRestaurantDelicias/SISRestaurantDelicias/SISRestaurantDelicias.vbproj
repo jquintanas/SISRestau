@@ -78,6 +78,7 @@
     <Compile Include="control\constantes.vb" />
     <Compile Include="control\funcionesComunes.vb" />
     <Compile Include="control\lecturaDeArchivo.vb" />
+    <Compile Include="control\mRefactoring.vb" />
     <Compile Include="control\utilPlatillos.vb" />
     <Compile Include="control\utilRestaurante.vb" />
     <Compile Include="control\utilUser.vb" />

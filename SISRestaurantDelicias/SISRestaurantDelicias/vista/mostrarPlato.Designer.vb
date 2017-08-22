@@ -32,6 +32,8 @@ Partial Class mostrarPlato
         Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtcosto = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -112,7 +114,7 @@ Partial Class mostrarPlato
         Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button1.ForeColor = System.Drawing.Color.Transparent
-        Me.Button1.Location = New System.Drawing.Point(58, 315)
+        Me.Button1.Location = New System.Drawing.Point(58, 359)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(50, 50)
         Me.Button1.TabIndex = 2
@@ -140,11 +142,31 @@ Partial Class mostrarPlato
         Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.Button2.FlatAppearance.BorderSize = 0
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.Button2.Location = New System.Drawing.Point(193, 315)
+        Me.Button2.Location = New System.Drawing.Point(193, 359)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(50, 50)
         Me.Button2.TabIndex = 4
         Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Times New Roman", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(58, 320)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(63, 22)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Precio"
+        '
+        'txtcosto
+        '
+        Me.txtcosto.Enabled = False
+        Me.txtcosto.Location = New System.Drawing.Point(127, 320)
+        Me.txtcosto.Name = "txtcosto"
+        Me.txtcosto.Size = New System.Drawing.Size(64, 20)
+        Me.txtcosto.TabIndex = 6
         '
         'mostrarPlato
         '
@@ -152,8 +174,10 @@ Partial Class mostrarPlato
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.SISRestaurantDelicias.My.Resources.Resources.menu
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(292, 420)
+        Me.ClientSize = New System.Drawing.Size(292, 473)
         Me.ControlBox = False
+        Me.Controls.Add(Me.txtcosto)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.Button1)
@@ -179,4 +203,6 @@ Partial Class mostrarPlato
     Friend WithEvents rbEje As System.Windows.Forms.RadioButton
     Friend WithEvents rBEstu As System.Windows.Forms.RadioButton
     Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents txtcosto As System.Windows.Forms.TextBox
 End Class
