@@ -40,16 +40,25 @@
                 Else
                     Me.meVista = New IVista(Me.userL, Me.bpago, constantes.celex, Color.Red)
                 End If
+                txtuser.Clear()
+                txtPass.Clear()
                 main.Hide()
                 Dim vistaT As New vistaGlobal(Me.meVista)
                 vistaT.construirAsistente()
                 vistaT.Show()
             Else
-                MsgBox("En construccion")
+                txtuser.Clear()
+                txtPass.Clear()
+                Me.userL = New userAdmin(Me.userL.id, Me.userL.nombre, Me.userL.pasword, Me.userL.rol, mRefactoring.construirListaRestaurants, "ninguno",
+                                         Me.user, funcionesComunes.listarCategoriasCreadas("dataAccess/categorias.txt"))
+                Dim vAdmin = New vistaAsistente(Me.userL)
+                Me.Hide()
+                vAdmin.Show()
             End If
         Else
             MsgBox("El usuario no existe, ingrese datos validos", MsgBoxStyle.Critical)
         End If
+        
     End Sub
 
 

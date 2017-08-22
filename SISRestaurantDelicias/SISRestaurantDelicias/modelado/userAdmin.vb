@@ -13,7 +13,7 @@
     End Sub
 
     Public Sub addUser()
-        Dim NewUser As New nuevoUsuario(Me.restaurantes, Me.listUser)
+        Dim NewUser As New nuevoUsuario(Me)
         NewUser.Show()
     End Sub
 

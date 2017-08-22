@@ -60,3 +60,4 @@ F:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\D
 F:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\Debug\SISRestaurantDelicias.vbproj.GenerateResource.Cache
 G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\Debug\SISRestaurantDelicias.vistaGlobal.resources
 F:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\Debug\SISRestaurantDelicias.vistaGlobal.resources
+G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\Debug\SISRestaurantDelicias.vistaAsistente.resources

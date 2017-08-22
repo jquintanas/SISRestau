@@ -35,5 +35,12 @@
         Next
     End Sub
 
+    Public Function construirListaRestaurants() As List(Of restaurante)
+        Dim lrest As New List(Of restaurante)
+        lrest.Add(New restaurante(constantes.celex, "Estoy en el celex", 123456, "El dueño", New List(Of platillos)))
+        lrest.Add(New restaurante(constantes.malicia, "Estoy en la fen", 123456, "El dueño", New List(Of platillos)))
+        Return lrest
+    End Function
+
 End Module
 

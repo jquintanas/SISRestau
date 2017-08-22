@@ -43,6 +43,10 @@ SISRestaurantDelicias
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:SISRestaurantDelicias.My.Resources.Resources.coming_soon">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:SISRestaurantDelicias.My.Resources.Resources.fondo_login">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

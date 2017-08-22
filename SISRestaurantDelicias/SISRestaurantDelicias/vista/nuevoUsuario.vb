@@ -1,8 +1,7 @@
 ﻿Public Class nuevoUsuario
-    Private restau As List(Of restaurante)
-    Private listU As List(Of basicUser)
+    Private admin As userAdmin
     Private Sub nuevoUsuario_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        For Each restaurant As restaurante In restau
+        For Each restaurant As restaurante In Me.admin.restaurantes
             cmbRestau.Items.Add(restaurant.fullNombre)
         Next
         cmbRol.Items.Add(constantes.administradorSis)
@@ -10,13 +9,12 @@
         cmbRol.Items.Add(constantes.estudiante)
     End Sub
 
-    Public Sub New(ByVal restaurantes As List(Of restaurante), ByVal users As List(Of basicUser))
+    Public Sub New(ByVal admin As userAdmin)
         ' This call is required by the designer.
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        Me.restau = restaurantes
-        Me.listU = users
+        Me.admin = admin
 
     End Sub
 
@@ -48,7 +46,7 @@
 
         If txtPass.Text = txtRePass.Text Then
             Dim basicU As New basicUser(txtCI.Text, txtNombre.Text, txtPass.Text, cmbRol.SelectedItem, cmbRestau.SelectedItem)
-            Me.listU.Add(basicU)
+            Me.admin.listUser.Add(basicU)
             Me.Close()
         Else
             MsgBox("Contraseñas no coinciden", MsgBoxStyle.Critical, "SIS Restaurant Delicias")
@@ -76,5 +74,9 @@
         If ban = 1 Then
             MsgBox("Complete todos los campos..", MsgBoxStyle.Critical, "SIS restaurante delicias")
         End If
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Me.Close()
     End Sub
 End Class

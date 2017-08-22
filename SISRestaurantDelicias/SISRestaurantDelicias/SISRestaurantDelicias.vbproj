@@ -197,6 +197,12 @@
     <Compile Include="vista\panelDeVistaAsistente.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="vista\vistaAsistente.Designer.vb">
+      <DependentUpon>vistaAsistente.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vista\vistaAsistente.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="vista\vistaGlobal.Designer.vb">
       <DependentUpon>vistaGlobal.vb</DependentUpon>
     </Compile>
@@ -246,6 +252,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="vista\panelDeVistaAsistente.resx">
       <DependentUpon>panelDeVistaAsistente.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista\vistaAsistente.resx">
+      <DependentUpon>vistaAsistente.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="vista\vistaGlobal.resx">
       <DependentUpon>vistaGlobal.vb</DependentUpon>
@@ -307,6 +316,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\258211.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coming soon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
