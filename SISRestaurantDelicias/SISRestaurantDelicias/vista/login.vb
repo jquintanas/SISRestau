@@ -11,6 +11,8 @@
     Public Sub New(ByVal use As List(Of basicUser))
         InitializeComponent()
         Me.user = use
+        txtuser.Select()
+
     End Sub
 
     Private Sub btnlogin_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnlogin.Click
@@ -116,5 +118,19 @@
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         main.Close()
 
+    End Sub
+
+    
+
+    Private Sub txtuser_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtuser.KeyPress
+        If e.KeyChar = Convert.ToChar(Keys.Enter) Then
+            txtPass.Select()
+        End If
+    End Sub
+
+    Private Sub txtPass_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles txtPass.KeyPress
+        If e.KeyChar = Convert.ToChar(Keys.Enter) Then
+            btnlogin.Select()
+        End If
     End Sub
 End Class

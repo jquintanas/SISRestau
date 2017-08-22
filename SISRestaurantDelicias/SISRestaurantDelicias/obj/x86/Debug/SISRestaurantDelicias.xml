@@ -15,11 +15,27 @@ SISRestaurantDelicias
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
+</member><member name="P:SISRestaurantDelicias.My.Resources.Resources._258211">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:SISRestaurantDelicias.My.Resources.Resources.btnexit">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member><member name="P:SISRestaurantDelicias.My.Resources.Resources.btnlogin">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:SISRestaurantDelicias.My.Resources.Resources.btnsave">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:SISRestaurantDelicias.My.Resources.Resources.buy_now_icon">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:SISRestaurantDelicias.My.Resources.Resources.cancel">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -31,11 +47,23 @@ SISRestaurantDelicias
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:SISRestaurantDelicias.My.Resources.Resources.fondo_ramas">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:SISRestaurantDelicias.My.Resources.Resources.fondo2">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:SISRestaurantDelicias.My.Resources.Resources.iconoSIS">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+</summary>
 </member><member name="P:SISRestaurantDelicias.My.Resources.Resources.logo">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:SISRestaurantDelicias.My.Resources.Resources.menu">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

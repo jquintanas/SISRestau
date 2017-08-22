@@ -23,14 +23,14 @@ Partial Class login
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.cmbresta = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.btnlogin = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txtPass = New System.Windows.Forms.TextBox()
         Me.txtuser = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.btnlogin = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -51,6 +51,18 @@ Partial Class login
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(839, 445)
         Me.Panel1.TabIndex = 0
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.BackgroundImage = Global.SISRestaurantDelicias.My.Resources.Resources.btnexit
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button1.Location = New System.Drawing.Point(409, 349)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(100, 45)
+        Me.Button1.TabIndex = 7
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'cmbresta
         '
@@ -73,6 +85,19 @@ Partial Class login
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Restaurante"
         Me.Label3.Visible = False
+        '
+        'btnlogin
+        '
+        Me.btnlogin.BackColor = System.Drawing.Color.Transparent
+        Me.btnlogin.BackgroundImage = Global.SISRestaurantDelicias.My.Resources.Resources.btnlogin
+        Me.btnlogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnlogin.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnlogin.Location = New System.Drawing.Point(288, 349)
+        Me.btnlogin.Name = "btnlogin"
+        Me.btnlogin.Size = New System.Drawing.Size(100, 45)
+        Me.btnlogin.TabIndex = 4
+        Me.btnlogin.UseVisualStyleBackColor = False
         '
         'Label2
         '
@@ -111,29 +136,6 @@ Partial Class login
         Me.Label1.Size = New System.Drawing.Size(61, 19)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Usuario"
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.Transparent
-        Me.Button1.BackgroundImage = Global.SISRestaurantDelicias.My.Resources.Resources.btnexit
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button1.Location = New System.Drawing.Point(409, 349)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(100, 45)
-        Me.Button1.TabIndex = 7
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'btnlogin
-        '
-        Me.btnlogin.BackColor = System.Drawing.Color.Transparent
-        Me.btnlogin.BackgroundImage = Global.SISRestaurantDelicias.My.Resources.Resources.btnlogin
-        Me.btnlogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.btnlogin.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.btnlogin.Location = New System.Drawing.Point(288, 349)
-        Me.btnlogin.Name = "btnlogin"
-        Me.btnlogin.Size = New System.Drawing.Size(100, 45)
-        Me.btnlogin.TabIndex = 4
-        Me.btnlogin.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '

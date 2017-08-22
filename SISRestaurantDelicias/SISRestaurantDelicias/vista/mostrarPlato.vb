@@ -48,11 +48,12 @@
                 bMsg = Me.user.carnetInteligente.pagar(m1.getPrecio)
                 funcionesComunes.mostrarMensaje(bMsg)
             End If
+            Me.Close()
         Else
             MsgBox("Datos Erronos no se realizo la compra", MsgBoxStyle.Critical)
         End If
-        Me.Close()
-        
+
+
     End Sub
 
    
@@ -72,5 +73,10 @@
         Me.IAlmu.aumentarPrecio(constantes.estudiantil)
         Me.IAlmu.crearAlmuerzo()
         Me.precio = constantes.estudiantil
+    End Sub
+
+    Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
+        Me.Close()
+
     End Sub
 End Class

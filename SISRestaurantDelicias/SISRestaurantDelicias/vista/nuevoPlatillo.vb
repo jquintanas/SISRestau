@@ -77,4 +77,9 @@
     Private Sub txtimagenes_TextChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles txtimagenes.TextChanged
         habilitarMouse(btnSave)
     End Sub
+
+    Private Sub btncancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btncancel.Click
+        Me.Close()
+
+    End Sub
 End Class

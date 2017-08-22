@@ -36,7 +36,7 @@ Partial Class panelDeVistaAsistente
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.Controls.Add(Me.ListBox2)
         Me.Panel1.Controls.Add(Me.ListBox1)
         Me.Panel1.Controls.Add(Me.MenuStrip1)
@@ -63,6 +63,7 @@ Partial Class panelDeVistaAsistente
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.BackColor = System.Drawing.Color.Black
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AgregarPlatilloToolStripMenuItem, Me.ListarPlatillosToolStripMenuItem, Me.ListarCategoríasDePlatillosToolStripMenuItem, Me.CerrarSesiónToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
@@ -72,24 +73,28 @@ Partial Class panelDeVistaAsistente
         '
         'AgregarPlatilloToolStripMenuItem
         '
+        Me.AgregarPlatilloToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.AgregarPlatilloToolStripMenuItem.Name = "AgregarPlatilloToolStripMenuItem"
         Me.AgregarPlatilloToolStripMenuItem.Size = New System.Drawing.Size(100, 20)
         Me.AgregarPlatilloToolStripMenuItem.Text = "Agregar Platillo"
         '
         'ListarPlatillosToolStripMenuItem
         '
+        Me.ListarPlatillosToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.ListarPlatillosToolStripMenuItem.Name = "ListarPlatillosToolStripMenuItem"
         Me.ListarPlatillosToolStripMenuItem.Size = New System.Drawing.Size(91, 20)
         Me.ListarPlatillosToolStripMenuItem.Text = "Listar Platillos"
         '
         'ListarCategoríasDePlatillosToolStripMenuItem
         '
+        Me.ListarCategoríasDePlatillosToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.ListarCategoríasDePlatillosToolStripMenuItem.Name = "ListarCategoríasDePlatillosToolStripMenuItem"
         Me.ListarCategoríasDePlatillosToolStripMenuItem.Size = New System.Drawing.Size(167, 20)
         Me.ListarCategoríasDePlatillosToolStripMenuItem.Text = "Listar Categorías De Platillos"
         '
         'CerrarSesiónToolStripMenuItem
         '
+        Me.CerrarSesiónToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.CerrarSesiónToolStripMenuItem.Name = "CerrarSesiónToolStripMenuItem"
         Me.CerrarSesiónToolStripMenuItem.Size = New System.Drawing.Size(88, 20)
         Me.CerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión"

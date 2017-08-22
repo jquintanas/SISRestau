@@ -49,6 +49,7 @@
         If txtPass.Text = txtRePass.Text Then
             Dim basicU As New basicUser(txtCI.Text, txtNombre.Text, txtPass.Text, cmbRol.SelectedItem, cmbRestau.SelectedItem)
             Me.listU.Add(basicU)
+            Me.Close()
         Else
             MsgBox("Contraseñas no coinciden", MsgBoxStyle.Critical, "SIS Restaurant Delicias")
             txtPass.Select

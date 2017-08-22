@@ -30,7 +30,7 @@ Partial Class estudianteP1
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.DarkRed
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.Controls.Add(Me.ListBoxCategorias)
         Me.Panel1.Controls.Add(Me.ListBox1)
         Me.Panel1.Location = New System.Drawing.Point(2, 2)

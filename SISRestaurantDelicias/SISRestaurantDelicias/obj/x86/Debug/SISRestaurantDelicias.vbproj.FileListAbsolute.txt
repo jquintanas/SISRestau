@@ -37,7 +37,6 @@ G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\D
 G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\Debug\SISRestaurantDelicias.panelDeVistaAsistente.resources
 G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\Debug\SISRestaurantDelicias.test.resources
 G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\Debug\SISRestaurantDelicias.detallesDeSISPago.resources
-G:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\Debug\SISRestaurantDelicias.home.resources
 F:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\bin\Debug\SISRestaurantDelicias.exe.config
 F:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\Debug\SISRestaurantDelicias.exe
 F:\u\ds\proyecto\SISRestau\SISRestaurantDelicias\SISRestaurantDelicias\obj\x86\Debug\SISRestaurantDelicias.xml

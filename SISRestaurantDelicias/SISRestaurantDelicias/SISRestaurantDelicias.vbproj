@@ -49,7 +49,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Resources\logo.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\iconoSIS.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -285,6 +285,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\btnlogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconoSIS.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btnsave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\buy-now-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo-ramas.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\258211.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

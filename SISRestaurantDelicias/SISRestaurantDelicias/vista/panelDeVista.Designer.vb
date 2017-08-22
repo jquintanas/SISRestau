@@ -43,7 +43,7 @@ Partial Class panelDeVista
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Controls.Add(Me.MenuStrip1)
         Me.Panel1.Location = New System.Drawing.Point(5, 4)
@@ -53,7 +53,7 @@ Partial Class panelDeVista
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.DarkOrange
+        Me.Panel2.BackColor = System.Drawing.Color.Transparent
         Me.Panel2.Location = New System.Drawing.Point(3, 36)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(835, 390)
@@ -61,6 +61,7 @@ Partial Class panelDeVista
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.BackColor = System.Drawing.Color.Black
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ListarCategoriasToolStripMenuItem, Me.BuscarPlatoToolStripMenuItem, Me.SISCarnetInteligenteToolStripMenuItem, Me.CerrarSesiónToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
@@ -70,6 +71,7 @@ Partial Class panelDeVista
         '
         'ListarCategoriasToolStripMenuItem
         '
+        Me.ListarCategoriasToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.ListarCategoriasToolStripMenuItem.Name = "ListarCategoriasToolStripMenuItem"
         Me.ListarCategoriasToolStripMenuItem.Size = New System.Drawing.Size(106, 20)
         Me.ListarCategoriasToolStripMenuItem.Text = "Listar Categorias"
@@ -77,6 +79,7 @@ Partial Class panelDeVista
         'BuscarPlatoToolStripMenuItem
         '
         Me.BuscarPlatoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PorNombreToolStripMenuItem, Me.PorDescripciónToolStripMenuItem})
+        Me.BuscarPlatoToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.BuscarPlatoToolStripMenuItem.Name = "BuscarPlatoToolStripMenuItem"
         Me.BuscarPlatoToolStripMenuItem.Size = New System.Drawing.Size(84, 20)
         Me.BuscarPlatoToolStripMenuItem.Text = "Buscar Plato"
@@ -96,6 +99,7 @@ Partial Class panelDeVista
         'SISCarnetInteligenteToolStripMenuItem
         '
         Me.SISCarnetInteligenteToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NotaDeCreditoToolStripMenuItem, Me.NotaDeDebitoToolStripMenuItem, Me.ConsultaDeSaldoToolStripMenuItem, Me.ConsultaTransaccionesToolStripMenuItem})
+        Me.SISCarnetInteligenteToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.SISCarnetInteligenteToolStripMenuItem.Name = "SISCarnetInteligenteToolStripMenuItem"
         Me.SISCarnetInteligenteToolStripMenuItem.Size = New System.Drawing.Size(129, 20)
         Me.SISCarnetInteligenteToolStripMenuItem.Text = "SIS carnet Inteligente"
@@ -139,6 +143,7 @@ Partial Class panelDeVista
         '
         'CerrarSesiónToolStripMenuItem
         '
+        Me.CerrarSesiónToolStripMenuItem.ForeColor = System.Drawing.Color.White
         Me.CerrarSesiónToolStripMenuItem.Name = "CerrarSesiónToolStripMenuItem"
         Me.CerrarSesiónToolStripMenuItem.Size = New System.Drawing.Size(88, 20)
         Me.CerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión"
