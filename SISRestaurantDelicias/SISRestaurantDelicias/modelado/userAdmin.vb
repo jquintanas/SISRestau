@@ -26,7 +26,6 @@
     Public Sub addRestaurant()
         Dim nuevoRE As New nuevoRestaurante(Me)
         nuevoRE.Show()
-
     End Sub
 
     Public Function mostraPlatillos(ByVal rest As restaurante) As List(Of platillos)

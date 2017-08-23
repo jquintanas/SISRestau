@@ -3,6 +3,3 @@
     Sub generarOrden()
 End Interface
 
-Public Class IFormaDePago
-
-End Class

@@ -11,10 +11,6 @@
         Me.user = user
     End Sub
 
-    Private Sub estudianteP1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
-    End Sub
-
     Private Sub ListBoxCategorias_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListBoxCategorias.SelectedIndexChanged
         Me.ListBox1.Items.Clear()
         Dim op As Integer

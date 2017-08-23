@@ -6,9 +6,6 @@
         Me.user = user
         Me.plato = listPlatos
     End Sub
-    Private Sub estudianteP2_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
-    End Sub
 
     Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
         Me.ListBox1.Items.Clear()

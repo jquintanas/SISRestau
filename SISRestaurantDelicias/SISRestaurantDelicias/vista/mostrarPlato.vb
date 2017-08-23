@@ -25,28 +25,16 @@
         If user = Me.user.id And pas = Me.user.pasword Then
             If checkbebida.Checked = True And checpos.Checked = False Then
                 Dim m2 As New decoratorBebida(New almuerzoEstudiantil(Me.plato))
-                m2.aumentarPrecio(Me.precio)
-                txtcosto.Text = m2.crearAlmuerzo()
-                bMsg = Me.user.carnetInteligente.pagar(m2.getPrecio)
-                funcionesComunes.mostrarMensaje(bMsg)
+                mRefactoring.decoratorAlmuerzo(m2, Me.precio, txtcosto, Me.user, bMsg)
             ElseIf checkbebida.Checked = True And checpos.Checked = True Then
                 Dim m4 As New decoratorBebida(New decoratorPostre(New almuerzoEstudiantil(Me.plato)))
-                m4.aumentarPrecio(Me.precio)
-                txtcosto.Text = m4.crearAlmuerzo()
-                bMsg = Me.user.carnetInteligente.pagar(m4.getPrecio)
-                funcionesComunes.mostrarMensaje(bMsg)
+                mRefactoring.decoratorAlmuerzo(m4, Me.precio, txtcosto, Me.user, bMsg)
             ElseIf checkbebida.Checked = False And checpos.Checked = True Then
                 Dim m3 As New decoratorPostre(New almuerzoEstudiantil(Me.plato))
-                m3.aumentarPrecio(Me.precio)
-                txtcosto.Text = m3.crearAlmuerzo()
-                bMsg = Me.user.carnetInteligente.pagar(m3.getPrecio)
-                funcionesComunes.mostrarMensaje(bMsg)
+                mRefactoring.decoratorAlmuerzo(m3, Me.precio, txtcosto, Me.user, bMsg)
             Else
                 Dim m1 As New almuerzoEstudiantil(Me.plato)
-                m1.aumentarPrecio(Me.precio)
-                txtcosto.Text = m1.crearAlmuerzo()
-                bMsg = Me.user.carnetInteligente.pagar(m1.getPrecio)
-                funcionesComunes.mostrarMensaje(bMsg)
+                mRefactoring.decoratorAlmuerzo(m1, Me.precio, txtcosto, Me.user, bMsg)
             End If
             Me.Close()
         Else
