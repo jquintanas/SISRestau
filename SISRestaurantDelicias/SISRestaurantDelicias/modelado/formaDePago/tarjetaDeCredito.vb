@@ -16,10 +16,22 @@
 
     End Sub
 
+    Private Function verificarFecha() As Boolean
+        Dim date1 As Date = Me.fechaExpiracion
+        Dim date2 As Date = Today
+        Dim result As Integer = DateTime.Compare(date1, date2)
+        If result > 0 Then
+            Return False
+        Else
+            Return True
+        End If
+
+    End Function
+
     Public Function pagar(ByVal monto As Double) As Boolean
         Randomize()
         Dim value As Integer = CInt(Int((2 * Rnd()) + 1))
-        If value = 1 Then
+        If value = 1 And verificarFecha() Then
             generarOrden()
             Return True
         Else
