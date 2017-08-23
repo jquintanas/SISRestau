@@ -51,13 +51,7 @@
         End While
     End Function
 
-    Public Sub isNumber(ByVal e As System.Windows.Forms.KeyPressEventArgs)
-        If Not Char.IsNumber(e.KeyChar) Then
-            e.Handled = True
-            MsgBox("Solo se aceptan numeros")
-        End If
-    End Sub
-
+    
     Private Function validarNumeroTarjeta() As String
         Dim bandera As Boolean = True
         Dim numero As String = ""
