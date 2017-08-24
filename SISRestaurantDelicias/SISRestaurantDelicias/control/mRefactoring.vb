@@ -70,7 +70,16 @@
     End Sub
 
     Public Sub crearIVista(ByRef userL As basicUser, ByRef meVista As IVista, ByRef bpago As Boolean)
+
         If userL.restaurante = constantes.malicia Then
+            meVista = New IVista(userL, bpago, constantes.malicia, Color.Black)
+        Else
+            meVista = New IVista(userL, bpago, constantes.celex, Color.Red)
+        End If
+    End Sub
+
+    Public Sub crearIVistaEstudiante(ByRef userL As basicUser, ByRef meVista As IVista, ByRef bpago As Boolean, ByRef cmbrest As ComboBox)
+        If cmbrest.SelectedItem = constantes.malicia Then
             meVista = New IVista(userL, bpago, constantes.malicia, Color.Black)
         Else
             meVista = New IVista(userL, bpago, constantes.celex, Color.Red)
@@ -99,6 +108,6 @@
         Label3.Visible = False
     End Sub
 
-    
+
 
 End Module

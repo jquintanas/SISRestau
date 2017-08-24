@@ -60,7 +60,7 @@
         mRefactoring.borrarCajasTexto(txtPass, txtuser)
         mRefactoring.ocultarLogin(cmbresta, Label3)
         main.Hide()
-        mRefactoring.crearIVista(Me.userL, Me.meVista, Me.bpago)
+        mRefactoring.crearIVistaEstudiante(Me.userL, Me.meVista, Me.bpago, cmbresta)
 
         Dim vistaT As New vistaGlobal(meVista)
         vistaT.construir()
