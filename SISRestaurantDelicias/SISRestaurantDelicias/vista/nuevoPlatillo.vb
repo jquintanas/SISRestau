@@ -35,22 +35,22 @@
     End Sub
 
     Private Sub btnSave_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnSave.MouseHover
-        Dim litBandera As New List(Of Boolean)
-        Dim ban As Integer = 0
-        litBandera.Add(verificarVacio(cmbCate.SelectedItem))
-        litBandera.Add(verificarVacio(cmbServido.SelectedItem))
-        litBandera.Add(verificarVacio(cmbTipo.SelectedItem))
-        litBandera.Add(verificarVacio(txtdescrip.Text))
-        litBandera.Add(verificarVacio(txtimagenes.Text))
-        litBandera.Add(verificarVacio(txtingredientes.Text))
-        litBandera.Add(verificarVacio(txtnombre.Text))
-        For Each tmp As Boolean In litBandera
+        Dim lista_De_banderas As New List(Of Boolean)
+        Dim bandera As Integer = 0
+        lista_De_banderas.Add(verificarVacio(cmbCate.SelectedItem))
+        lista_De_banderas.Add(verificarVacio(cmbServido.SelectedItem))
+        lista_De_banderas.Add(verificarVacio(cmbTipo.SelectedItem))
+        lista_De_banderas.Add(verificarVacio(txtdescrip.Text))
+        lista_De_banderas.Add(verificarVacio(txtimagenes.Text))
+        lista_De_banderas.Add(verificarVacio(txtingredientes.Text))
+        lista_De_banderas.Add(verificarVacio(txtnombre.Text))
+        For Each tmp As Boolean In lista_De_banderas
             If tmp Then
                 btnSave.Enabled = False
-                ban = 1
+                bandera = 1
             End If
         Next
-        If ban = 1 Then
+        If bandera = 1 Then
             MsgBox("Complete todos los campos..", MsgBoxStyle.Critical, "SIS restaurante delicias")
         End If
     End Sub

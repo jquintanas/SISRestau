@@ -7,9 +7,6 @@
         Me.vista = vista
     End Sub
 
-    Private Sub panelDeVistaAsistente_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
-    End Sub
 
     Private Sub AgregarPlatilloToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AgregarPlatilloToolStripMenuItem.Click
         Me.user.addPlatillo()
@@ -22,9 +19,6 @@
         Next
     End Sub
 
-    Private Sub Panel1_Paint(ByVal sender As System.Object, ByVal e As System.Windows.Forms.PaintEventArgs) Handles Panel1.Paint
-        
-    End Sub
 
     Private Sub ListarCategoríasDePlatillosToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ListarCategoríasDePlatillosToolStripMenuItem.Click
         Me.ListBox2.Items.Clear()

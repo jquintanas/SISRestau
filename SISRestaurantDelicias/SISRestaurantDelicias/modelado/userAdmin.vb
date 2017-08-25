@@ -13,7 +13,7 @@
     End Sub
 
     Public Sub addUser()
-        Dim NewUser As New nuevoUsuario(Me.restaurantes, Me.listUser)
+        Dim NewUser As New nuevoUsuario(Me)
         NewUser.Show()
     End Sub
 
@@ -26,7 +26,6 @@
     Public Sub addRestaurant()
         Dim nuevoRE As New nuevoRestaurante(Me)
         nuevoRE.Show()
-
     End Sub
 
     Public Function mostraPlatillos(ByVal rest As restaurante) As List(Of platillos)

@@ -6,74 +6,95 @@ SISRestaurantDelicias
 </name>
 </assembly>
 <members>
+<member name="T:SISRestaurantDelicias.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
 <member name="P:SISRestaurantDelicias.My.Resources.Resources.ResourceManager">
-	<summary>
+<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>
-</member><member name="P:SISRestaurantDelicias.My.Resources.Resources.Culture">
-	<summary>
+</member>
+<member name="P:SISRestaurantDelicias.My.Resources.Resources.Culture">
+<summary>
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
-</member><member name="P:SISRestaurantDelicias.My.Resources.Resources._258211">
-	<summary>
+</member>
+<member name="P:SISRestaurantDelicias.My.Resources.Resources._258211">
+<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member><member name="P:SISRestaurantDelicias.My.Resources.Resources.btnexit">
-	<summary>
+</member>
+<member name="P:SISRestaurantDelicias.My.Resources.Resources.btnexit">
+<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member><member name="P:SISRestaurantDelicias.My.Resources.Resources.btnlogin">
-	<summary>
+</member>
+<member name="P:SISRestaurantDelicias.My.Resources.Resources.btnlogin">
+<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member><member name="P:SISRestaurantDelicias.My.Resources.Resources.btnsave">
-	<summary>
+</member>
+<member name="P:SISRestaurantDelicias.My.Resources.Resources.btnsave">
+<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member><member name="P:SISRestaurantDelicias.My.Resources.Resources.buy_now_icon">
-	<summary>
+</member>
+<member name="P:SISRestaurantDelicias.My.Resources.Resources.buy_now_icon">
+<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member><member name="P:SISRestaurantDelicias.My.Resources.Resources.cancel">
-	<summary>
+</member>
+<member name="P:SISRestaurantDelicias.My.Resources.Resources.cancel">
+<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member><member name="P:SISRestaurantDelicias.My.Resources.Resources.Chef_2_icon">
-	<summary>
+</member>
+<member name="P:SISRestaurantDelicias.My.Resources.Resources.Chef_2_icon">
+<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member><member name="P:SISRestaurantDelicias.My.Resources.Resources.fondo_login">
-	<summary>
+</member>
+<member name="P:SISRestaurantDelicias.My.Resources.Resources.coming_soon">
+<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member><member name="P:SISRestaurantDelicias.My.Resources.Resources.fondo_ramas">
-	<summary>
+</member>
+<member name="P:SISRestaurantDelicias.My.Resources.Resources.fondo_login">
+<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member><member name="P:SISRestaurantDelicias.My.Resources.Resources.fondo2">
-	<summary>
+</member>
+<member name="P:SISRestaurantDelicias.My.Resources.Resources.fondo_ramas">
+<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member><member name="P:SISRestaurantDelicias.My.Resources.Resources.iconoSIS">
-	<summary>
+</member>
+<member name="P:SISRestaurantDelicias.My.Resources.Resources.fondo2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:SISRestaurantDelicias.My.Resources.Resources.iconoSIS">
+<summary>
   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
 </summary>
-</member><member name="P:SISRestaurantDelicias.My.Resources.Resources.logo">
-	<summary>
+</member>
+<member name="P:SISRestaurantDelicias.My.Resources.Resources.logo">
+<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member><member name="P:SISRestaurantDelicias.My.Resources.Resources.menu">
-	<summary>
+</member>
+<member name="P:SISRestaurantDelicias.My.Resources.Resources.menu">
+<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member><member name="P:SISRestaurantDelicias.My.Resources.Resources.userLogo">
-	<summary>
+</member>
+<member name="P:SISRestaurantDelicias.My.Resources.Resources.userLogo">
+<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
-</summary>
-</member><member name="T:SISRestaurantDelicias.My.Resources.Resources">
-	<summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
 </member>
 </members>

@@ -1,8 +1,7 @@
 ﻿Public Class nuevoUsuario
-    Private restau As List(Of restaurante)
-    Private listU As List(Of basicUser)
+    Private admin As userAdmin
     Private Sub nuevoUsuario_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        For Each restaurant As restaurante In restau
+        For Each restaurant As restaurante In Me.admin.restaurantes
             cmbRestau.Items.Add(restaurant.fullNombre)
         Next
         cmbRol.Items.Add(constantes.administradorSis)
@@ -10,13 +9,12 @@
         cmbRol.Items.Add(constantes.estudiante)
     End Sub
 
-    Public Sub New(ByVal restaurantes As List(Of restaurante), ByVal users As List(Of basicUser))
+    Public Sub New(ByVal admin As userAdmin)
         ' This call is required by the designer.
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        Me.restau = restaurantes
-        Me.listU = users
+        Me.admin = admin
 
     End Sub
 
@@ -48,7 +46,7 @@
 
         If txtPass.Text = txtRePass.Text Then
             Dim basicU As New basicUser(txtCI.Text, txtNombre.Text, txtPass.Text, cmbRol.SelectedItem, cmbRestau.SelectedItem)
-            Me.listU.Add(basicU)
+            Me.admin.listUser.Add(basicU)
             Me.Close()
         Else
             MsgBox("Contraseñas no coinciden", MsgBoxStyle.Critical, "SIS Restaurant Delicias")
@@ -59,15 +57,15 @@
     End Sub
 
     Private Sub btnSave_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnSave.MouseHover
-        Dim litBandera As New List(Of Boolean)
+        Dim lista_De_Bandera As New List(Of Boolean)
         Dim ban As Integer = 0
-        litBandera.Add(verificarVacio(cmbRestau.SelectedItem))
-        litBandera.Add(verificarVacio(cmbRol.SelectedItem))
-        litBandera.Add(verificarVacio(txtCI.Text))
-        litBandera.Add(verificarVacio(txtNombre.Text))
-        litBandera.Add(verificarVacio(txtPass.Text))
-        litBandera.Add(verificarVacio(txtRePass.Text))
-        For Each tmp As Boolean In litBandera
+        lista_De_Bandera.Add(verificarVacio(cmbRestau.SelectedItem))
+        lista_De_Bandera.Add(verificarVacio(cmbRol.SelectedItem))
+        lista_De_Bandera.Add(verificarVacio(txtCI.Text))
+        lista_De_Bandera.Add(verificarVacio(txtNombre.Text))
+        lista_De_Bandera.Add(verificarVacio(txtPass.Text))
+        lista_De_Bandera.Add(verificarVacio(txtRePass.Text))
+        For Each tmp As Boolean In lista_De_Bandera
             If tmp Then
                 btnSave.Enabled = False
                 ban = 1
@@ -76,5 +74,9 @@
         If ban = 1 Then
             MsgBox("Complete todos los campos..", MsgBoxStyle.Critical, "SIS restaurante delicias")
         End If
+    End Sub
+
+    Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
+        Me.Close()
     End Sub
 End Class

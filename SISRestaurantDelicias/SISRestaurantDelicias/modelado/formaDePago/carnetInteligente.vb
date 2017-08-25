@@ -27,11 +27,10 @@
             generarOrden()
             Me.listaDeTransacciones.Add(New transacciones("Se realiza un debito de la cuenta", New Date))
             Me.listaCompras.Add(New compras(Me.orden, New Date))
-
         Else
             Dim respuesta As String
             Dim monT As Double = monto - Me.montoDeCuenta
-            respuesta = MsgBox("Desea Cargar el monto $" + monT + " a su nota de credito", MsgBoxStyle.YesNo)
+            respuesta = MsgBox("Desea Cargar el monto $" + Convert.ToString(monT) + " a su nota de credito", MsgBoxStyle.YesNo)
             If respuesta = vbYes Then
                 Me.montoDeCuenta = 0
                 Me.notaDeCredito = monT

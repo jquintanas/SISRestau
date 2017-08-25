@@ -43,16 +43,80 @@
                         Return "14:00 - 14:30"
                     Case 8
                         Return "14:30 - 15:00"
+                    Case Else
+                        Return ""
                 End Select
                 b = False
             End If
         End While
     End Function
 
+    
+    Private Function validarNumeroTarjeta() As String
+        Dim bandera As Boolean = True
+        Dim numero As String = ""
+        While bandera
+            numero = InputBox("Ingrese el numero de la tarjeta")
+            If IsNumeric(numero) Then
+                bandera = False
+            Else
+                MsgBox("Numero de tarjeta invalido")
+            End If
+        End While
+        Return numero
+    End Function
+
+    Private Function validadCVC() As Integer
+        Dim bandera As Boolean = True
+        Dim numero As Integer = 0
+        Dim recive As String
+        While bandera
+            recive = InputBox("Ingrese el cvc de su tarjeta")
+            If IsNumeric(recive) And recive.Length = 3 Then
+                bandera = False
+                numero = Convert.ToInt64(recive)
+            End If
+        End While
+        Return numero
+    End Function
+
+    Private Function esMes() As String
+        Dim bandera As Boolean = True
+        Dim mes As String = ""
+        While bandera
+            mes = InputBox("Ingrese el mes de caducidad de la tarjeta")
+            If IsNumeric(mes) Then
+                If Convert.ToInt64(mes) > 0 And Convert.ToInt64(mes) < 13 Then
+                    bandera = False
+                    mes = Convert.ToInt64(mes)
+                End If
+            End If
+        End While
+        Return mes
+    End Function
+
+    Private Function esAnio() As String
+        Dim bandera As Boolean = True
+        Dim anio As String = ""
+        While bandera
+            anio = InputBox("Ingrese el año de caducidad de la tarjeta")
+            If IsNumeric(anio) Then
+                If Convert.ToInt64(anio) > 0 Then
+                    bandera = False
+                End If
+            End If
+        End While
+        Return anio
+    End Function
+
+    Private Function esFecha() As String
+        Return "#1/" + esMes() + "/" + esAnio() + "#"
+    End Function
+
     Public Function crearTarjeta() As tarjetaCreditoAdapter
-        Dim id As String = InputBox("Ingrese el numero de la tarjeta")
-        Dim cvc As Integer = Convert.ToInt64(InputBox("Ingrese el cvc de su tarjeta"))
-        Dim caduca As String = InputBox("Ingrese la fecha de caducidad de su tarjeta")
+        Dim id As String = validarNumeroTarjeta()
+        Dim cvc As Integer = validadCVC()
+        Dim caduca As String = esFecha()
         Return New tarjetaCreditoAdapter(id, cvc, caduca)
     End Function
 

@@ -36,6 +36,7 @@ Partial Class nuevoUsuario
         Me.Label6 = New System.Windows.Forms.Label()
         Me.cmbRestau = New System.Windows.Forms.ComboBox()
         Me.btnSave = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -147,6 +148,7 @@ Partial Class nuevoUsuario
         'cmbRestau
         '
         Me.cmbRestau.FormattingEnabled = True
+        Me.cmbRestau.Items.AddRange(New Object() {"No"})
         Me.cmbRestau.Location = New System.Drawing.Point(89, 121)
         Me.cmbRestau.Name = "cmbRestau"
         Me.cmbRestau.Size = New System.Drawing.Size(176, 21)
@@ -158,11 +160,23 @@ Partial Class nuevoUsuario
         Me.btnSave.BackgroundImage = Global.SISRestaurantDelicias.My.Resources.Resources.btnsave
         Me.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnSave.Location = New System.Drawing.Point(163, 148)
+        Me.btnSave.Location = New System.Drawing.Point(116, 148)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(50, 50)
         Me.btnSave.TabIndex = 10
         Me.btnSave.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Transparent
+        Me.Button1.BackgroundImage = Global.SISRestaurantDelicias.My.Resources.Resources.cancel
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button1.Location = New System.Drawing.Point(217, 148)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(50, 50)
+        Me.Button1.TabIndex = 11
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'nuevoUsuario
         '
@@ -172,6 +186,7 @@ Partial Class nuevoUsuario
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(426, 201)
         Me.ControlBox = False
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.cmbRestau)
         Me.Controls.Add(Me.Label6)
@@ -205,4 +220,5 @@ Partial Class nuevoUsuario
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents cmbRestau As System.Windows.Forms.ComboBox
     Friend WithEvents btnSave As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class

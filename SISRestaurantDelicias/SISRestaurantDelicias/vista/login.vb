@@ -28,59 +28,40 @@
                 cmbresta.Visible = True
                 Label3.Visible = True
             ElseIf Me.userL.rol = constantes.asistenteR Then
-                If Me.userL.restaurante = constantes.malicia Then
-                    mRefactoring.construirMalicia(Me.factoryPlato, Me.listPlatos, Me.claves, Me.rest)
-                Else
-                    mRefactoring.contruirOtroRestaurante(Me.factoryPlato, Me.listPlatos, Me.claves, Me.rest)
-                End If
+                mRefactoring.crearRestaurantes(Me.userL, Me.factoryPlato, Me.listPlatos, Me.claves, Me.rest)
                 Me.userL = New Asistente(Me.userL.id, Me.userL.nombre, Me.userL.pasword, Me.userL.rol, Me.listPlatos, Me.claves, Me.rest)
-
-                If Me.userL.restaurante = constantes.malicia Then
-                    Me.meVista = New IVista(Me.userL, Me.bpago, constantes.malicia, Color.Black)
-                Else
-                    Me.meVista = New IVista(Me.userL, Me.bpago, constantes.celex, Color.Red)
-                End If
+                mRefactoring.crearIVista(Me.userL, Me.meVista, Me.bpago)
+                mRefactoring.borrarCajasTexto(txtPass, txtuser)
                 main.Hide()
                 Dim vistaT As New vistaGlobal(Me.meVista)
                 vistaT.construirAsistente()
                 vistaT.Show()
             Else
-                MsgBox("En construccion")
+                mRefactoring.borrarCajasTexto(txtPass, txtuser)
+                Me.userL = New userAdmin(Me.userL.id, Me.userL.nombre, Me.userL.pasword, Me.userL.rol, mRefactoring.construirListaRestaurants, "ninguno",
+                                         Me.user, funcionesComunes.listarCategoriasCreadas("dataAccess/categorias.txt"))
+                Dim vAdmin = New vistaAsistente(Me.userL)
+                Me.Hide()
+                vAdmin.Show()
+                main.Hide()
             End If
         Else
             MsgBox("El usuario no existe, ingrese datos validos", MsgBoxStyle.Critical)
         End If
+        
     End Sub
 
 
     Private Sub cmbresta_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmbresta.SelectedIndexChanged
-        If cmbresta.SelectedItem = constantes.malicia Then
-            mRefactoring.construirMaliciaUsuario(Me.factoryPlato, Me.listPlatos, Me.claves)
-        Else
-            mRefactoring.construirOtroRestauranteUsuario(Me.factoryPlato, Me.listPlatos, Me.claves)
-        End If
+        mRefactoring.crearVistaEstudiante(cmbresta, Me.factoryPlato, Me.listPlatos, Me.claves)
         Me.IPago = funcionesComunes.seleccionarFormaPago(Me.userL)
-        If TypeName(Me.IPago) = "carnetInteligente" Then
-            Me.bpago = True
-        Else
-            Me.bpago = False
-        End If
-
-        
-
+        mRefactoring.determinarTipoFormaDePago(Me.IPago, Me.bpago)
         Me.userL = New estudiante(Me.userL.id, Me.userL.nombre, Me.userL.pasword, Me.userL.rol,
                                     Me.listPlatos, claves, Me.IPago)
-        txtuser.Clear()
-        txtPass.Clear()
-        cmbresta.Visible = False
-        Label3.Visible = False
+        mRefactoring.borrarCajasTexto(txtPass, txtuser)
+        mRefactoring.ocultarLogin(cmbresta, Label3)
         main.Hide()
-
-        If cmbresta.SelectedItem = constantes.malicia Then
-            Me.meVista = New IVista(Me.userL, Me.bpago, constantes.malicia, Color.Black)
-        Else
-            Me.meVista = New IVista(Me.userL, Me.bpago, constantes.celex, Color.Red)
-        End If
+        mRefactoring.crearIVistaEstudiante(Me.userL, Me.meVista, Me.bpago, cmbresta)
 
         Dim vistaT As New vistaGlobal(meVista)
         vistaT.construir()

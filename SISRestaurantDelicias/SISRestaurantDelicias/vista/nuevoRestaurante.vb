@@ -27,14 +27,14 @@
     End Sub
 
     Private Sub btnsave_MouseHover(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnsave.MouseHover
-        Dim litBandera As New List(Of Boolean)
+        Dim lista_De_Banderas As New List(Of Boolean)
         Dim ban As Integer = 0
-        litBandera.Add(verificarVacio(cmbAsis.SelectedItem))
-        litBandera.Add(verificarVacio(txtDirec.Text))
-        litBandera.Add(verificarVacio(txtDuen.Text))
-        litBandera.Add(verificarVacio(txtNombre.Text))
-        litBandera.Add(verificarVacio(txtTele.Text))
-        For Each tmp As Boolean In litBandera
+        lista_De_Banderas.Add(verificarVacio(cmbAsis.SelectedItem))
+        lista_De_Banderas.Add(verificarVacio(txtDirec.Text))
+        lista_De_Banderas.Add(verificarVacio(txtDuen.Text))
+        lista_De_Banderas.Add(verificarVacio(txtNombre.Text))
+        lista_De_Banderas.Add(verificarVacio(txtTele.Text))
+        For Each tmp As Boolean In lista_De_Banderas
             If tmp Then
                 btnsave.Enabled = False
                 ban = 1
